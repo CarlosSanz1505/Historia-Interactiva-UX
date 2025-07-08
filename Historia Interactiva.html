@@ -112,8 +112,16 @@ h1 {
   font-size: 2.25em;
 }
 
+.warning {
+  border: 5px dashed red;
+  border-radius: 2rem;
+  padding: 30px;
+}
+
 h2 {
   font-size: 1.8em;
+  margin-top: 10px;
+  padding-left: 30px;
 }
 
 code {
@@ -126,6 +134,27 @@ code {
   border-radius: 5px;
 }
 
+.save-disclaimer {
+  margin-top: 3rem;
+}
+
+nav[aria-label="Opciones de historia"] ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Adaptabilidad del passage a mostrar/esconder la ui-bar */
+@media screen and (max-width: 1136px) {
+  #story:has(+ #ui-bar.stowed) {
+    margin-left: 3.5em;
+  }
+}
+
+#story:has(+ #ui-bar.stowed) {
+    margin-left: 4.5em;
+}
+
 tw-story {
   background-color: white;
   color: black;
@@ -133,11 +162,6 @@ tw-story {
 
 tw-passage {
   padding-bottom: 300px;
-}
-
-.warning {
-  border: 3px dashed red;
-  padding: 30px;
 }
 
 tw-link {
@@ -201,7 +225,6 @@ tw-sidebar tw-icon {
 /*ESCENARIOS EN GENERAL*/
 #passages {
   margin: 1rem;
-
 }
 
 /*ESCENARIO 1*/
@@ -225,7 +248,19 @@ tw-sidebar tw-icon {
   position: fixed;
   top: 10px;
   right: 10px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Botón para silenciar SFX
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* ACCESIBILIDAD */
+// Establecer lenguaje del documento como español
+document.documentElement.lang = "es";
+
+// Intercambiar orden de #story y #ui-bar
+// (se debe leer el contenido principal antes que la barra lateral)
+$('#story').insertBefore('#ui-bar');
+
+// Establecer barra lateral como landmark complementario
+$('#ui-bar').attr('role', 'complementary');
+
+/* FUNCIONALIDADES */
+// Botón para silenciar SFX
 const $button = $('button.macro-button');
 
 // $('#soundToggle')
@@ -308,8 +343,7 @@ El nudo en tu pecho no desaparece. La sensación de que todos aquí tienen un pl
 
 &lt;&lt;if $audio&gt;&gt;
 &lt;&lt;audio asistir_a_charla play&gt;&gt;
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Escenario 1" tags="" position="425,400" size="100,100">&lt;&lt;script&gt;&gt;UIBar.stow()&lt;&lt;/script&gt;&gt;
-!!ESCENARIO 1: Charla sobre proyecto de Vida
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Escenario 1" tags="" position="425,400" size="100,100">!!ESCENARIO 1: Charla sobre proyecto de Vida
 
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;imagenes/ir_a_charla.webp&quot;&gt;
@@ -321,26 +355,49 @@ La palabra &quot;Futuro&quot; te golpea como un eco pesado. &lt;b&gt;Futuro&lt;/
 
 &lt;i&gt;Decide rápido si debes ir o no a la charla&lt;/i&gt;, te dices a ti mismo. Pero tu cuerpo no responde.
 
-[[Decido ir a la charla, puede que aprenda algo nuevo|En charla][$estadoEnCharla to &quot;atento&quot;]]
-[[Esas charlas siempre son lo mismo, prefiero no asistir|Comiendo con amigos][$estadoEnCharla to &quot;ausente&quot;]]
-
-&lt;&lt;set $nivelAnsiedad to 10&gt;&gt;
-&lt;&lt;if $audio&gt;&gt;
-	&lt;&lt;audio fondo_colegio play&gt;&gt;
- &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Preguntar a un amigo" tags="" position="875,625" size="100,100">No puedes evitar sentirte culpable. Apenas terminas tu gaseosa, buscas a uno de tus amigos que sí fue a la charla &quot;¿De qué hablaron?&quot;, le preguntas.
+&lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
+	&lt;ul&gt;\
+    	&lt;li&gt;[[Decido ir a la charla, puede que aprenda algo nuevo|En charla][$estadoEnCharla to &quot;atento&quot;]]&lt;/li&gt;\
+		&lt;li&gt;[[Esas charlas siempre son lo mismo, prefiero no asistir|Comiendo con amigos][$estadoEnCharla to &quot;ausente&quot;]]&lt;/li&gt;\
+    &lt;/ul&gt;\
+&lt;/nav&gt;\
+\
+&lt;&lt;set $nivelAnsiedad to 10&gt;&gt;&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio fondo_colegio play&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Preguntar a un amigo" tags="" position="875,625" size="100,100">No puedes evitar sentirte culpable. Apenas terminas tu gaseosa, buscas a uno de tus amigos que sí fue a la charla &quot;¿De qué hablaron?&quot;, le preguntas.
 
 Te explica algunos puntos pero las dudas siguen rondando tu mente. &lt;i&gt;¿Qué más dijeron que podría servirme? ¿Habrán mencionado algo que me perdí por completo?&lt;/i&gt;
 
 Igual ya sientes que es hora de ir a tu casa, tomas el autobús sintiéndote algo intranquilo, llegas a casa, saludas a tus padres y te recuestas en la cama de tu habitación.
 
-[[Continuar|Cena familiar]]</tw-passagedata><tw-passagedata pid="9" name="Menú" tags="" position="425,250" size="100,100">&lt;h1&gt;Historia Interactiva&lt;/h1&gt;
+[[Continuar|Cena familiar]]</tw-passagedata><tw-passagedata pid="9" name="Menú" tags="" position="425,250" size="100,100">&lt;h1&gt;Historia sobre ansiedad&lt;/h1&gt;\
 &lt;div class=&quot;warning&quot;&gt;\
-	&lt;h2&gt;ADVERTENCIA:&lt;/h2&gt;\
-	&lt;p&gt;Esta historia interactiva aborda temas relacionados con los trastornos de ansiedad. Algunas escenas pueden incluir descripciones de situaciones que evocan angustia emocional, ataques de pánico u otros síntomas relacionados con la ansiedad. Se recomienda discreción a las personas sensibles a estos temas.&lt;/p&gt;\
-	&lt;p&gt;&lt;strong&gt;Tu progreso siempre será guardado automáticamente&lt;/strong&gt;, así que si en algún momento te sientes incómodo o afectado, puedes &lt;em&gt;cerrar la pestaña&lt;/em&gt; en tu navegador para abandonar la experiencia sin preocuparte por perder tu avance.&lt;/p&gt;\
-&lt;/div&gt;
-
-[[Comenzar historia interactiva|Escenario 1]]</tw-passagedata><tw-passagedata pid="10" name="Inspiración" tags="" position="1025,250" size="100,100">Mientras la charla avanza, algo cambia: sientes un interés genuino. Las palabras del expositor, antes confusas, ahora tienen sentido; no necesitas tenerlo todo claro ahora mismo.
+	&lt;h2&gt;ADVERTENCIA&lt;/h2&gt;\
+    \
+	&lt;p&gt;Esta historia interactiva aborda temas relacionados con los trastornos de ansiedad. Algunas escenas pueden incluir descripciones de situaciones que evocan angustia emocional, ataques de pánico u otros síntomas relacionados. Recomendamos discreción si eres sensible a estos temas.&lt;/p&gt;\
+    \
+    &lt;p&gt;A continuación encontrarás algunos recursos que pueden ayudarte a comprender mejor esta condición. Recuerda que experimentar emociones como las que aquí se describen es completamente válido, y que mereces acceso a apoyo y herramientas para sobrellevarlas:&lt;/p&gt;\
+    \
+    &lt;ul&gt;\
+    	&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://medlineplus.gov/spanish/ency/article/000917.htm&quot;&gt;Trastorno de ansiedad generalizada&lt;/a&gt; - &lt;i&gt;MedlinePlus&lt;/i&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.nimh.nih.gov/health/publications/espanol/anxiety-disorders-listing&quot;&gt;Publicaciones sobre trastornos de ansiedad&lt;/a&gt; - &lt;i lang=&quot;en&quot;&gt;National Institute of Mental Health&lt;/i&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.mayoclinic.org/es/diseases-conditions/anxiety/diagnosis-treatment/drc-20350967&quot;&gt;Trastornos de ansiedad (Diagnóstico y tratamiento)&lt;/a&gt; - &lt;i&gt;Mayo Clinic&lt;/i&gt;&lt;/li&gt;
+    &lt;/ul&gt;\
+    \
+    &lt;p class=&quot;save-disclaimer&quot;&gt;&lt;strong&gt;Tu progreso siempre será guardado automáticamente&lt;/strong&gt;, así que si en algún momento te sientes incómodo o afectado, puedes &lt;em&gt;cerrar la pestaña&lt;/em&gt; en tu navegador para abandonar la experiencia sin preocuparte por perder tu avance.&lt;/p&gt;\
+&lt;/div&gt;\
+&lt;p&gt;Algunas consideraciones para usuarios con lector de pantalla:&lt;/p&gt;\
+&lt;ul&gt;\
+	&lt;li&gt;Las funcionalidades de navegación de la historia están distribuidas entre landmarks para facilitar su acceso. Se definen los siguientes:&lt;/li&gt;\
+    &lt;ul&gt;
+    	&lt;li&gt;&lt;strong&gt;Opciones de historia:&lt;/strong&gt; Es un &lt;em&gt;landmark de navegación&lt;/em&gt;que contiene las decisiones que se pueden tomar en cada momento de la historia. Está ubicado de manera subsiguiente al landmark principal.&lt;/li&gt;\
+        &lt;li&gt;&lt;strong&gt;Landmark complementario:&lt;/strong&gt; Representa la barra lateral, donde se encuentran las opciones alternativas de navegación por la historia, tales como el avance o retroceso entre escenarios ya explorados, o el guardado y reinicio del progreso en la historia.&lt;/li&gt;\
+    &lt;/ul&gt;\
+&lt;/ul&gt;\
+\
+&lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
+	&lt;ul&gt;\
+    	&lt;li&gt;[[Comenzar historia interactiva|Escenario 1]]&lt;/li&gt;\
+    &lt;/ul&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="10" name="Inspiración" tags="" position="1025,250" size="100,100">Mientras la charla avanza, algo cambia: sientes un interés genuino. Las palabras del expositor, antes confusas, ahora tienen sentido; no necesitas tenerlo todo claro ahora mismo.
 
 Esa idea aligera tu carga, y empiezas a tomar notas mentales sobre cómo explorar lo que te apasiona y enfrentar lo desconocido. Al mirar a tus compañeros, entiendes que no eres el único con dudas, lo que te da tranquilidad.
 
@@ -348,8 +405,7 @@ Esa idea aligera tu carga, y empiezas a tomar notas mentales sobre cómo explora
   Nivel de Ansiedad: &lt;span id=&quot;ansiedad-num&quot;&gt;&lt;&lt;= $nivelAnsiedad&gt;&gt;%&lt;/span&gt;
   &lt;!-- &lt;div class=&quot;barra-ansiedad l $nivelAnsiedad&quot;&gt;&lt;/div&gt; --&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;button &quot;🔊&quot;&gt;&gt;&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio &quot;:all&quot; volume 0&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;audio &quot;:all&quot; volume 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $audio to not $audio&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Hablando en público" tags="" position="875,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;button &quot;🔊&quot;&gt;&gt;&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio &quot;:all&quot; volume 0&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;audio &quot;:all&quot; volume 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $audio to not $audio&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Hablando en público" tags="" position="875,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;imagenes/hablando_en_publico.webp&quot;&gt;
 &lt;/div&gt;
 
