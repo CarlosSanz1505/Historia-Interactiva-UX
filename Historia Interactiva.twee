@@ -1,0 +1,644 @@
+:: StoryTitle
+Historia Interactiva
+
+
+:: StoryData
+{
+  "ifid": "744B88F8-A88D-450D-88BC-CDF5C9C8211D",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Menú",
+  "zoom": 1
+}
+
+
+:: Atento a la charla {"position":"725,325","size":"100,100"}
+<p>Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.</p>\
+\
+<p>Pero entonces menciona algo que no entiendes del todo. Te surgen preguntas: <i>¿Qué quiso decir con eso? ¿Podría aplicarlo a lo que me interesa?</i></p>\
+\
+<p>Miras alrededor, viendo si alguien más levanta la mano. Tu corazón se acelera al imaginarte preguntando frente a todos. <i>¿Y si suena tonto?</i></p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Voy a hacer mi pregunta porque en la vida no hay preguntas bobas sino bobos que no preguntan|Hablando en público]]</li>\
+        <li>[[Voy a buscarla en internet, confío más en su respuesta|Buscando duda en internet][$nivelAnsiedad += 10]]</li>\
+	</ul>\
+</nav>
+
+
+:: Buscando duda en internet {"position":"875,475","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/buscando_duda_internet.webp"></div>\
+\
+<p>No te atreves a preguntar. Bajas la mirada y finges tomar notas, pero tu mente sigue dando vueltas a la duda. Sacas el celular y buscas información en internet.</p>\
+\
+<p>Lees de todo pero las explicaciones son vagas o demasiado técnicas. Sientes que entiendes menos que antes. <i>El tema ya pasó, ¿Por qué no pregunté cuando tuve la oportunidad?</i></p>\
+\
+<p>El nudo en tu pecho regresa, más apretado. Mientras guardas el celular, una sensación de frustración te invade. <i>¿Y si nunca entiendo esto?</i></p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Seguir viendo charla]]</li>\
+	</ul>\
+</nav>
+
+
+:: Caminata {"position":"875,775","size":"100,100"}
+<p>Decides dejar de pensar en la charla. Te quedas con tus amigos un rato más, pero cuando la conversación pierde interés para ti, te levantas y empiezas a caminar por el colegio.</p>\
+\
+<p>Sientes algo no es culpa exactamente… es otra cosa. Una inquietud que no sabes cómo describir. Caminas sin un rumbo claro, esperando que esta sensación desaparezca.</p>\
+\
+<p>Al no notar diferencia decides irte a casa con un nudo en la garganta, subes rápidamente a tu cuarto sin saludar siquiera a tus padres.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Cena familiar]]</li>
+	</ul>
+</nav>
+
+
+:: Cena familiar {"position":"1325,400","size":"100,100"}
+<h2>ESCENARIO 2: Cena con tus padres</h2>\
+\
+<img src="imagenes/cena_con_padres.webp">\
+\
+<p>Despiertas del sueño y tu mamá te llama para cenar. Bajas al comedor, donde todo parece tranquilo mientras tus padres conversan. Comentas sobre la charla del colegio, pero la calma se rompe cuando tu papá pregunta: "¿Y tú? ¿Ya has pensado qué quieres estudiar?". El ruido de fondo desaparece, tu corazón se acelera, y las palabras se atascan. Sus rostros expectantes te llenan de presión, y no sabes cómo responder.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<<if $estadoEnCharla is "atento">><li>[[Respondo con honestidad según lo aprendido en la charla|Honestidad (positivo)]]</li>\
+        <li>[[Todavía no tengo una respuesta por lo que me dirijo al baño|En el baño][$nivelAnsiedad += 10]]</li>\
+<<elseif $estadoEnCharla is "distraido">>\
+		<li>[[No sé qué responder y tampoco puse atención a la charla, pero algunas palabras salen de mi boca|Responder con inseguridad][$nivelAnsiedad +=10]]</li>\
+        <li>[[Sigo comiendo, quizá se olvide el tema|No responder][$nivelAnsiedad +=10]]</li>\
+<<elseif $estadoEnCharla is "ausente">>\
+		<li>[[Contesto con honestidad y hasta confieso que me perdí la charla|Honestidad (negativo)]]</li>\
+        <li>[[Invento una respuesta, es mejor esto que nada|Respuesta inventada][$nivelAnsiedad += 10]]</li>\
+<</if>>\
+	</ul>\
+</nav>\
+
+
+:: Comiendo con amigos {"position":"650,700","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/comiendo_con_amigos.webp"></div>\
+\
+<p>Decides no entrar y buscas a tus amigos en el patio y caminan hacia la tienda. Se ríen de tonterías y piden algunas papas fritas y gaseosas.</p>\
+\
+<p>Por un momento, sientes que hiciste lo correcto, pero de un instante a otro tu mente vuelve al auditorio. <i>¿Debí quedarme? Tal vez me estoy perdiendo algo importante… ¿Hice bien al venir aquí? ¿Qué dirá la profesora si nota que no asistí?</i> Tragas saliva, pero el nudo en tu pecho sigue ahí.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[La duda te sobrepasa y le preguntas a un amigo sobre la charla|Preguntar a un amigo]]</li>\
+        <li>[[Ya imaginas más o menos de que trató la charla y sigues con tus amigos|Caminata][$nivelAnsiedad += 10]]</li>\
+	</ul>\
+</nav>
+
+
+:: Descanso {"position":"1750,175","size":"100,100"}
+<p>Miras las tareas sobre el escritorio. <i>¿Por qué no puedo empezar? ¿Qué me pasa?</i> Te das vueltas en la cama, cuestionándote por tu falta de voluntad.</p>\
+\
+<p>Agarras el celular para distraerte. Abres Instagram y empiezas a scrollear pero la culpa no desaparece. En el fondo, sabes que deberías estar haciendo otra cosa.</p>\
+\
+<p><i>Otro día desperdiciado</i>. Apagas el celular y te quedas mirando el techo, con el pecho apretado y la mente llena de reproches.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Invitación a salir]]</li>\
+	</ul>\
+</nav>
+
+
+:: Deslizando {"position":"875,25","size":"100,100"}
+No te sientes culpable, así que sigues deslizando en el celular por un momento, parece que todo está bien.
+
+Pero en el fondo sabes que estás evitando algo. Si pones atención, sabes que vas a empezar a pensar en todas esas cosas que tratas de ignorar: el futuro, las expectativas, las dudas.
+
+Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. Solo dejas que el tiempo pase, esperando que la charla termine pronto.
+
+[[Continuar|Seguir deslizando]]
+
+
+:: Distraído {"position":"725,100","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/se_distrae_en_el_celular.webp"></div>\
+\
+<p>Sacas el celular de tu bolsillo y lo enciendes. Miras mensajes, memes, cualquier cosa que te aleje de lo que está pasando aquí. Te sientes menos ansioso, pero solo por un momento.</p>\
+\
+<p>De pronto, una voz en tu cabeza susurra: <i>Deberías estar prestando atención. Viniste para esto, ¿no?</i> Intentas ignorarla y sigues deslizando. Pero la culpa crece. <i>¿Y si me estoy perdiendo algo importante?</i></p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Mejor pongo atención, puede que algo me quede sirviendo|No vine aquí para esto]]</li>\
+        <li>[[Los memes que estoy viendo están buenos y me entretengo en el celular|Deslizando][$estadoEnCharla to "distraido"]]</li>\
+	</ul>\
+</nav>
+
+
+:: En charla {"position":"575,225","size":"100,100"}
+<p>Te sientas en una de las sillas, nadie parece notar tu presencia, lo cual agradeces. Un señor empieza a hablar sobre carreras, vocaciones, y algo sobre cómo decidir “qué quieres ser en la vida”.</p>\
+<p>Tratas de concentrarte, pero no lo logras. <i>¿Por qué vine?</i> te preguntas. Sientes que tu mente va y viene. <i>¿Debería prestar atención o mejor miro algo en el celular?</i></p>\
+<p>El nudo en tu pecho no desaparece. La sensación de que todos aquí tienen un plan y tú no, te persigue.</p>\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Siempre es lo mismo con estas charlas, mejor sacas el celular|Distraído][$nivelAnsiedad += 10]]</li>\
+        <li>[[Mejor pongo atención, creo que están diciendo cosas interesantes|Atento a la charla]]</li>\
+	</ul>\
+</nav>\
+<<if $audio>><<audio asistir_a_charla play>><</if>>
+
+
+:: En el baño {"position":"1475,475","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/en_el_bano.webp></div>\
+\
+<p>La pregunta te supera, así que te excusas y te encierras en el baño. Escuchas a tus padres murmurar preocupados, lo que aumenta tu angustia.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Regreso a la mesa]]</li>
+	</ul>\
+</nav>
+
+
+:: Escenario 1 {"position":"425,400","size":"100,100"}
+<h2>ESCENARIO 1: Charla sobre proyecto de Vida</h2>\
+<div class="contenedor-imagen"><img src="imagenes/ir_a_charla.webp"></div>\
+<p>Estás en el patio del colegio cuando de repente escuchas a la profesora Marcela decir: "¡Recuerden, estudiantes! La charla sobre la universidad comienza en cinco minutos. Es importante que asistan si están pensando en su futuro."</p>\
+<p>La palabra "Futuro" te golpea como un eco pesado. <b>Futuro</b>. Solo pensar en ello hace que tu estómago se encoja. <i>¿Qué se supone que debo hacer?</i> Tus pensamientos hacen un torbellino: <i>¿Y si voy y dicen cosas que no entiendo? ¿Y si me hacen preguntas? ¿Qué pasa si no tengo ni idea de qué quiero hacer?</i></p>\
+<p><i>Decide rápido si debes ir o no a la charla</i>, te dices a ti mismo. Pero tu cuerpo no responde.</p>\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Decido ir a la charla, puede que aprenda algo nuevo|En charla][$estadoEnCharla to "atento"]]</li>\
+		<li>[[Esas charlas siempre son lo mismo, prefiero no asistir|Comiendo con amigos][$estadoEnCharla to "ausente"]]</li>\
+    </ul>\
+</nav>\
+<<set $nivelAnsiedad to 10>><<if $audio>><<audio fondo_colegio play>><</if>>
+
+
+:: Estudio {"position":"1750,25","size":"100,100"}
+<p>Miras la pila de tareas pendientes. Suspiras, sabiendo que, si no empiezas ahora, mañana será peor, y comienzas a hacerlas. Al principio, te sientes abrumado. <i>¿Cómo dejé que se acumulara tanto?</i> Pero poco a poco, vas avanzando. La sensación de estar logrando algo empieza a reemplazar el estrés.</p>\
+\
+<p>Horas después, te sientes cansado, pero también un poco más tranquilo. <i>Al menos hice algo hoy</i>. Cierras los ojos, y esta vez, el sueño llega más rápido.</p>
+
+
+:: Habitación {"position":"1625,325","size":"100,100"}
+<p>Después de cenar, subes a tu habitación y te recuestas en la cama. Piensas en lo aprendido y sientes que fue un buen día. Ahora sabes que puedes empezar a construir tu futuro paso a paso.</p>
+
+
+:: Hablando en público {"position":"875,325","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/hablando_en_publico.webp"></div>\
+\
+<p>Te levantas sintiendo todas las miradas sobre ti. Aunque tenías la pregunta clara en tu mente, los nervios te traicionan y tus palabras se desordenan, provocando risas que aumentan tu incomodidad.</p>\
+\
+<p>El expositor, con calma, te anima a respirar profundo y reformular tu pregunta, comparando los nervios con el proceso de pensar en el futuro. Finalmente, logras preguntar y él responde con claridad. Al escucharlo, te das cuenta de que no fue tan terrible como temías; aprender y preguntar está bien.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Inspiración]]</li>\
+	</ul>\
+</nav>
+
+
+:: Honestidad (negativo) {"position":"1475,625","size":"100,100"}
+<p>Bajas la mirada y les dices la verdad: "No sé, ni siquiera fui a la charla del colegio… no sé qué responder."</p>\
+\
+<p>La reacción es inmediata. Tu papá se cruza de brazos, y tu mamá se muestra decepcionada. Te hablan sobre la importancia de tomar estas cosas en serio. Te sientes atacado, y antes de que la discusión se agrande, te levantas y te vas al cuarto, cerrando la puerta con fuerza.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Sentirse mal]]</li>
+	</ul>\
+</nav>
+
+
+:: Honestidad (positivo) {"position":"1475,325","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/si_responder,webp></div>\
+\
+<p>Respiras profundo y admites que no tienes claro qué estudiar, pero compartes lo que aprendiste en la charla: no es necesario decidirlo todo de inmediato. Tu mamá sonríe y dice que es un buen comienzo. La cena continúa tranquila, y te sientes más aliviado.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Habitación]]</li>\
+	</ul>\
+</nav>
+
+
+:: Inspiración {"position":"1025,250","size":"100,100"}
+<p>Mientras la charla avanza, algo cambia: sientes un interés genuino. Las palabras del expositor, antes confusas, ahora tienen sentido; no necesitas tenerlo todo claro ahora mismo.</p>\
+\
+<p>Esa idea aligera tu carga, y empiezas a tomar notas mentales sobre cómo explorar lo que te apasiona y enfrentar lo desconocido. Al mirar a tus compañeros, entiendes que no eres el único con dudas, lo que te da tranquilidad.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Seguir viendo charla]]</li>\
+	</ul>
+</nav>
+
+
+:: Invitación a salir {"position":"1900,100","size":"100,100"}
+<p>Mientras intentas dormirte, el celular vibra. ¿Quién será a esta hora? Lo agarras y desbloqueas la pantalla. Es un mensaje de tus amigos: "¿Vamos a comer algo? Nos vemos en 20 minutos."</p>\
+\
+<p>Respondes con un simple: "No puedo, tal vez otro día." Dejas el celular en su lugar y te das cuenta que perdiste el poco sueño que tenías. Los pensamientos vuelven: <i>¿Cómo voy a encontrar algo que me guste? ¿Qué pasa si me quedo estancado?</i></p>\
+\
+<p>Finalmente, el cansancio te vence. Te despiertas agotado, como si la noche apenas hubiera sido un parpadeo.</p>
+
+
+:: Irse al cuarto {"position":"1625,100","size":"100,100"}
+<p>Decides ir a tu cuarto y cierras la puerta detrás de ti. Te tiras en la cama con los brazos cruzados, mirando el techo. Tu mente no para: <i>¿Qué pasará si sigo evitando estas conversaciones? ¿Y si no soy lo suficientemente bueno para nada?</i></p>\
+\
+<p>De pronto, tu mente salta a las tareas pendientes del colegio <i>¿Será que decido hacer mis pendientes o prefiero descansar de todo este caos?</i></p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Es mejor terminar las tareas y estar libre para el ocio|Estudio]]</li>\
+        <li>[[Ha sido un día muy pesado y mereces descansar|Descanso][$nivelAnsiedad += 10]]</li>\
+	</ul>\
+</nav>
+
+
+:: Menú {"position":"425,250","size":"100,100"}
+<h1>Historia sobre ansiedad</h1>\
+<div class="warning">\
+	<h2>ADVERTENCIA</h2>\
+    \
+	<p>Esta historia interactiva aborda temas relacionados con los trastornos de ansiedad. Algunas escenas pueden incluir descripciones de situaciones que evocan angustia emocional, ataques de pánico u otros síntomas relacionados. Recomendamos discreción si eres sensible a estos temas.</p>\
+    \
+    <p>A continuación encontrarás algunos recursos que pueden ayudarte a comprender mejor esta condición. Recuerda que experimentar emociones como las que aquí se describen es completamente válido, y que mereces acceso a apoyo y herramientas para sobrellevarlas:</p>\
+    \
+    <ul>\
+    	<li><a target="_blank" href="https://medlineplus.gov/spanish/ency/article/000917.htm">Trastorno de ansiedad generalizada</a> - <i>MedlinePlus</i></li>
+        <li><a target="_blank" href="https://www.nimh.nih.gov/health/publications/espanol/anxiety-disorders-listing">Publicaciones sobre trastornos de ansiedad</a> - <i lang="en">National Institute of Mental Health</i></li>
+        <li><a target="_blank" href="https://www.mayoclinic.org/es/diseases-conditions/anxiety/diagnosis-treatment/drc-20350967">Trastornos de ansiedad (Diagnóstico y tratamiento)</a> - <i>Mayo Clinic</i></li>
+    </ul>\
+    \
+    <p class="save-disclaimer"><strong>Tu progreso siempre será guardado automáticamente</strong>, así que si en algún momento te sientes incómodo o afectado, puedes <em>cerrar la pestaña</em> en tu navegador para abandonar la experiencia sin preocuparte por perder tu avance.</p>\
+</div>\
+<p>Algunas consideraciones para usuarios con lector de pantalla:</p>\
+<ul>\
+	<li>Las funcionalidades de navegación de la historia están distribuidas entre landmarks para facilitar su acceso. Se definen los siguientes "puntos de referencia":</li>\
+    <ul>
+    	<li><strong>Opciones de historia:</strong> Es un <em>landmark de navegación</em> que contiene las decisiones que se pueden tomar en cada momento de la historia. Está ubicado de manera subsiguiente al landmark principal.</li>\
+        <li><strong>Landmark complementario:</strong> Representa la barra lateral, donde se encuentran las opciones alternativas de navegación por la historia, tales como el avance o retroceso entre escenarios ya explorados, o el guardado y reinicio del progreso en la historia.</li>\
+    </ul>\
+</ul>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Comenzar historia interactiva|Escenario 1]]</li>\
+    </ul>\
+</nav>
+
+
+:: No responder {"position":"1475,25","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/no_responder.webp></div>\
+\
+<p>No respondes, pero eso solo hace que insistan. "Toño, este es un tema serio. ¿Qué te gustaría estudiar?", pregunta tu papá con más firmeza.</p>\
+\
+<p>La tensión crece. <i>No puedo más</i>, así que te vas a comer al cuarto. Subes las escaleras sintiendo un peso insoportable en el pecho. Terminas de comer y lavas la loza suplicando no encontrarte más a mis padres y menos mal que no.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Irse al cuarto]]</li>\
+	</ul>\
+</nav>
+
+
+:: No vine aquí para esto {"position":"875,175","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/mejor_pongo_atencion.webp"></div>\
+\
+<p>Dejas el celular sobre tu regazo. Suspiras, sintiendo la culpa como un peso en el pecho. <i>No vine aquí para esto</i>.</p>\
+\
+<p>Prestas atención a la charla y poco a poco, empiezas a entender lo que dice sobre cómo elegir una carrera y planificar el futuro. Te das cuenta de que algunas cosas tienen sentido, incluso te parecen útiles.</p>\
+\
+<p>El nudo en tu pecho se relaja un poco. <i>Hice bien en dejar el celular. Esto es importante</i>. Te sientes más tranquilo al saber que estás aprovechando la charla.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Inspiración]]</li>\
+	</ul>\
+</nav>\
+<<if $audio>><<audio suspiro play>><</if>>
+
+
+:: PassageHeader {"position":"100,225","size":"100,100"}
+<<if State.active.title isnot "Menú">><<set _n to $nivelAnsiedad>><div class="barra-ansiedad" @style="`background-color: hsl(${100-_n}, 100%, 20%)`">
+  Nivel de Ansiedad: <span id="ansiedad-num"><<= $nivelAnsiedad>>%</span>
+  <!-- <div class="barra-ansiedad l $nivelAnsiedad"></div> -->
+</div>
+<</if>><<button "🔊">><<if $audio>><<audio ":all" volume 0>><<else>><<audio ":all" volume 1>><</if>><<set $audio to not $audio>><</button>>
+
+
+:: Pesadilla {"position":"1775,475","size":"100,100"}
+<p>Te quedas dormido y sueñas que estás caminando por un pasillo. Hay puertas cerradas cada una con un letrero: "Medicina", "Ingeniería", "Arte". Tratas de abrir una, pero están bloqueadas, y la sensación de urgencia crece, una gran puerta con la palabra “Futuro” aparece frente a ti. La abres, y detrás solo hay un abismo oscuro. Sientes que caes, y el vacío se apodera de ti.</p>\
+\
+<p>Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. <i>Por lo menos ya amaneció…</i></p>
+
+
+:: Preguntar a un amigo {"position":"875,625","size":"100,100"}
+<p>No puedes evitar sentirte culpable. Apenas terminas tu gaseosa, buscas a uno de tus amigos que sí fue a la charla "¿De qué hablaron?", le preguntas.</p>\
+\
+<p>Te explica algunos puntos pero las dudas siguen rondando tu mente. <i>¿Qué más dijeron que podría servirme? ¿Habrán mencionado algo que me perdí por completo?</i></p>\
+\
+<p>Igual ya sientes que es hora de ir a tu casa, tomas el autobús sintiéndote algo intranquilo, llegas a casa, saludas a tus padres y te recuestas en la cama de tu habitación.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Cena familiar]]</li>
+	</ul>
+</nav>
+
+
+:: Regreso a la mesa {"position":"1625,475","size":"100,100"}
+<p>Después de un rato en el baño, regresas a la mesa. Tus padres no dicen nada más sobre el tema, y la cena se desarrolla en silencio. Terminas rápido, te despides y subes a tu cuarto.</p>\
+\
+<p>En tu cama, revives la escena y te cuestionas por qué no puedes hablar sobre tu futuro.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Pesadilla]]</li>\
+	</ul>\
+</nav>
+
+
+:: Responder con inseguridad {"position":"1475,175","size":"100,100"}
+<p>Balbuceas algo incoherente, mencionando opciones vagas. Tus padres te piden que tomes el tema en serio, y te sientes pequeño y frustrado por no tener una respuesta clara.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Irse al cuarto]]</li>\
+	</ul>\
+</nav>
+
+
+:: Respuesta inventada {"position":"1475,775","size":"100,100"}
+<p>"Medicina", dices sin pensar mucho, solo para salir del paso. La expresión de tus padres cambia al instante. Ambos parecen aliviados. "Eso es una gran decisión, Toño", dice tu mamá, sonriendo.</p>\
+\
+<p>Sientes alivio al ver sus reacciones, pero también algo de incomodidad. Piensas: <i>¿Siquiera me gusta la medicina? ¡¡¡Porque creo que le tengo miedo a la sangre… ¡¡¡Oh no, qué he hecho!!!</i></p>\
+\
+<p>Ni siquiera terminas de comer y te diriges a tu habitación.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Sentirse mal]]</li>\
+	</ul>\
+</nav>
+
+
+:: Seguir deslizando {"position":"1100,25","size":"100,100"}
+<p>La charla termina, pero apenas lo notas. Cruzas el patio del colegio sin prestar mucha atención a nada. Escuchas a algunos compañeros comentar sobre la charla, pero no te detienes. Todo parece seguir su curso sin involucrarte.</p>\
+\
+<p>Caminas hasta tu casa con el celular en la mano. Cuando llegas, saludas rápido a tus padres y te encierras en tu cuarto.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Cena familiar]]</li>
+	</ul>
+</nav>
+
+
+:: Seguir viendo charla {"position":"1175,250","size":"100,100"}
+<p>La charla termina y caminas en silencio hacia la salida.</p>\
+\
+<p>En el camino a casa no estás seguro de qué sientes. No es exactamente tristeza, pero tampoco alegría. <i>Quizás debería pensar más en lo que dijeron… o tal vez no importa tanto.</i></p>\
+\
+<p>Llegas a casa, saludas a tus padres y subes directo a tu habitación. Te recuestas en la cama, dejando la mochila en el suelo.</p>\
+\
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Cena familiar]]</li>\
+	</ul>\
+</nav>\
+
+
+:: Sentirse mal {"position":"1625,700","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/sentirse_mal.webp"></div>\
+\
+<p>Llegas a tu cuarto sintiéndote peor que nunca, mientras piensas: <i>¿Por qué soy así? ¿Por qué no puedo hacer lo correcto?</i></p>\
+<p>Piensas en tus padres: <i>¿Qué estarán diciendo de mí ahora? ¿Qué pasa si siempre los decepciono?</i> Tu futuro parece más confuso que nunca. <i>¿Cómo voy a encontrar algo que me guste? ¿Y si nunca lo hago?</i></p>\
+<p>El cansancio finalmente te vence, y te quedas dormido, pero las dudas siguen ahí, rondando como un eco en tu mente.</p>
+
+
+:: StoryDisplayTitle {"position":"100,475","size":"100,100"}
+Historia Interactiva
+
+
+:: StoryInit {"position":"100,350","size":"100,100"}
+<<cacheaudio "aumentar_ansiedad" "sonidos/aumentar_ansiedad.mp3">>
+<<cacheaudio "fondo_colegio" "sonidos/fondo_colegio.mp3">>
+<<cacheaudio "asistir_a_charla" "sonidos/asistir_a_charla.mp3">>
+<<cacheaudio "gulp" "sonidos/gulp.mp3">>
+
+<<cacheaudio "suspiro" "sonidos/suspiro.mp3">>
+
+<<set $nivelAnsiedad to 0>> <!-- Valor inicial (0-100) -->
+<<set $audio to true>>
+
+
+:: Style Markup Reference {"position":"100,100","size":"100,100"}
+//Emphasis//
+''Strong Emphasis''
+==Strikethrough==
+Super^^script^^
+Sub~~script~~
+> Quote
+>> Nested quote
+* A list item
+* Another list item
+# A list item
+# Another list item
+"""No //format//"""
+@@Highlight Inline@@
+!Level 1 Heading
+!!Level 2 Heading
+!!!Level 3 Heading
+!!!!Level 4 Heading
+!!!!!Level 5 Heading
+!!!!!!Level 6 Heading
+
+
+:: StoryScript [script]
+/* ACCESIBILIDAD */
+// Establecer lenguaje del documento como español
+document.documentElement.lang = "es";
+
+// Intercambiar orden de #story y #ui-bar
+// (se debe leer el contenido principal antes que la barra lateral)
+$('#story').insertBefore('#ui-bar');
+
+// Establecer barra lateral como landmark complementario
+$('#ui-bar').attr('role', 'complementary');
+
+/* FUNCIONALIDADES */
+// Botón para silenciar SFX
+const $button = $('button.macro-button');
+
+// $('#soundToggle')
+$button.click(function() {
+    State.variables.audio = !State.variables.audio;
+    
+    // Actualizar el botón
+    $(this).html(State.variables.audio ? '🔊' : '🔇');
+    
+    // Actualizar el mensaje
+    $('#soundStatus').html(
+      State.variables.audio 
+        ? '<p class="active">El sonido está activado</p>' 
+        : '<p class="inactive">El sonido está desactivado</p>'
+    );
+    
+    // Controlar el audio (versión simple)
+    document.querySelectorAll('audio').forEach(audio => {
+      audio.muted = !State.variables.audio;
+    });
+    
+    // Opcional: Mostrar notificación temporal
+    const notification = State.variables.audio 
+      ? 'Sonido ACTIVADO' 
+      : 'Sonido DESACTIVADO';
+    $(document).trigger(':notify', notification);
+  });
+
+:: StoryStylesheet [stylesheet]
+* {
+  font-family: Verdana;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+.warning {
+  border: 5px dashed red;
+  border-radius: 2rem;
+  padding: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+code {
+  font-family: Courier;
+}
+
+.key {
+  background-color: rgb(35, 35, 35);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+nav[aria-label="Opciones de historia"] {
+  margin-top: 3rem;
+}
+
+nav[aria-label="Opciones de historia"] ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Adaptabilidad del passage a mostrar/esconder la ui-bar */
+@media screen and (max-width: 1136px) {
+  #story:has(+ #ui-bar.stowed) {
+    margin-left: 3.5em;
+  }
+}
+
+#story:has(+ #ui-bar.stowed) {
+    margin-left: 4.5em;
+}
+
+tw-story {
+  background-color: white;
+  color: black;
+}
+
+tw-passage {
+  padding-bottom: 300px;
+}
+
+tw-link {
+  color: #0076A8;
+}
+
+/* NIVEL DE ANSIEDAD */
+tw-sidebar {
+  left: -10rem;
+}
+
+tw-sidebar tw-icon {
+  display: none;
+}
+
+#myButton {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	z-index: 1000;
+}
+
+.nivel-ansiedad {
+}
+
+.medidor-ansiedad {
+  height: 50vh;
+  border: 15px solid darkgrey;
+}
+
+.barra-ansiedad {
+  top: 0;
+  width: 100%;
+  /* background-color: green; */
+  text-align: center;
+  font-size: 20px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.barra-ansiedad.l0 {
+  height: 0%;
+}
+
+.barra-ansiedad.l30 {
+  height: 30%;
+  background-color: yellow;
+}
+
+.barra-ansiedad.l70 {
+  height: 70%;
+  background-color: orange;
+}
+
+#story {
+  display: flex;
+  justify-content:center;
+}
+/*ESCENARIOS EN GENERAL*/
+#passages {
+  margin: 1rem;
+}
+
+/*ESCENARIO 1*/
+#passage-escenario1 {
+  background-image:url("imagenes/ir_a_charla.webp");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(100px)
+  min-height: 100vh;
+  padding: 6rem;
+}
+
+.contenedor-imagen {
+  display:flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.macro-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
