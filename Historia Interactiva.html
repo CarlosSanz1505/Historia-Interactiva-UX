@@ -242,13 +242,40 @@ tw-sidebar tw-icon {
   display:flex;
   justify-content: center;
   padding: 1rem;
-}
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">const $uiBar = $('#ui-bar');
+const $uiBarBody = $('#ui-bar-body');
 
-.macro-button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* ACCESIBILIDAD */
+// Re-ubicar botón de audio
+$(document).on(':passagedisplay', function(event) {
+  const $soundToggle = $('#passages button.link-internal.macro-button');
+  if (!$('#sound-toggle')[0]) {
+    $soundToggle.attr('id', 'sound-toggle');
+    $uiBarBody.append($soundToggle);
+    $soundToggle.on('click', function() {
+      $(this).text(State.variables.audio ? '🔊' : '🔇');
+    });
+  } else {
+    $soundToggle.remove();
+  }
+});
+
+Setting.addHeader("Content Settings", "Settings controlling what content is made available in the game.");
+
+/* ACCESIBILIDAD */
+
+/* Navegación por teclado */
+// Atajos de botones de forward y backward
+let $historyBackward;
+let $historyForward;
+$(document).on('keydown', function(event) {
+  $historyBackward = $('#history-backward');
+  $historyForward = $('#history-forward');
+  // Devolverse
+  if (event.ctrlKey && event.key === 'ArrowLeft') $historyBackward.trigger('click');
+  if (event.ctrlKey && event.key === 'ArrowRight') $historyForward.trigger('click');
+});
+
+
 // Establecer lenguaje del documento como español
 document.documentElement.lang = "es";
 
@@ -257,37 +284,30 @@ document.documentElement.lang = "es";
 $('#story').insertBefore('#ui-bar');
 
 // Establecer barra lateral como landmark complementario
-$('#ui-bar').attr('role', 'complementary');
+$uiBar.attr('role', 'complementary');
 
 /* FUNCIONALIDADES */
 // Botón para silenciar SFX
-const $button = $('button.macro-button');
 
 // $('#soundToggle')
-$button.click(function() {
-    State.variables.audio = !State.variables.audio;
+/*$button.on('click', function() {
+  State.variables.audio = !State.variables.audio;
+  
+  // Actualizar el botón
+  console.log($(this).text());
+  $(this).html(State.variables.audio ? '🔊' : '🔇');
     
-    // Actualizar el botón
-    $(this).html(State.variables.audio ? '🔊' : '🔇');
+  // Controlar el audio (versión simple)
+  document.querySelectorAll('audio').forEach(audio => {
+    audio.muted = !State.variables.audio;
+  });
     
-    // Actualizar el mensaje
-    $('#soundStatus').html(
-      State.variables.audio 
-        ? '<p class="active">El sonido está activado</p>' 
-        : '<p class="inactive">El sonido está desactivado</p>'
-    );
-    
-    // Controlar el audio (versión simple)
-    document.querySelectorAll('audio').forEach(audio => {
-      audio.muted = !State.variables.audio;
-    });
-    
-    // Opcional: Mostrar notificación temporal
-    const notification = State.variables.audio 
-      ? 'Sonido ACTIVADO' 
-      : 'Sonido DESACTIVADO';
-    $(document).trigger(':notify', notification);
-  });</script><tw-passagedata pid="1" name="Atento a la charla" tags="" position="725,325" size="100,100">&lt;p&gt;Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.&lt;/p&gt;\
+  // Opcional: Mostrar notificación temporal
+  const notification = State.variables.audio 
+  	? 'Sonido ACTIVADO' 
+  	: 'Sonido DESACTIVADO';
+  $(document).trigger(':notify', notification);
+});*/</script><tw-passagedata pid="1" name="Atento a la charla" tags="" position="725,325" size="100,100">&lt;p&gt;Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.&lt;/p&gt;\
 \
 &lt;p&gt;Pero entonces menciona algo que no entiendes del todo. Te surgen preguntas: &lt;i&gt;¿Qué quiso decir con eso? ¿Podría aplicarlo a lo que me interesa?&lt;/i&gt;&lt;/p&gt;\
 \
