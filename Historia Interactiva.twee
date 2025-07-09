@@ -945,22 +945,37 @@ $(document).on(':passagedisplay', function(event) {
   }
 });
 
-Setting.addHeader("Content Settings", "Settings controlling what content is made available in the game.");
+
 
 /* ACCESIBILIDAD */
 
 /* Navegación por teclado */
-// Atajos de botones de forward y backward
-let $historyBackward;
-let $historyForward;
+
+// Hotkeys
 $(document).on('keydown', function(event) {
-  $historyBackward = $('#history-backward');
-  $historyForward = $('#history-forward');
-  // Devolverse
-  if (event.ctrlKey && event.key === 'ArrowLeft') $historyBackward.trigger('click');
-  if (event.ctrlKey && event.key === 'ArrowRight') $historyForward.trigger('click');
+  const key = event.key;
+  const ctrlKey = event.ctrlKey;
+  const altKey = event.altKey;
+  
+  // Retroceder y Avanzar entre pasajes visitados (barra lateral)
+  if (ctrlKey && key === 'ArrowLeft') $('#history-backward').trigger('click');
+  if (ctrlKey && key === 'ArrowRight') $('#history-forward').trigger('click');
+  
+  // Guardar
+  if (altKey && key === 'g') $('#menu-item-saves a').trigger('click');
+  
+  // Reiniciar
+  if (altKey && key === 'r') $('#menu-item-restart a').trigger('click');
+  
+  // Activar/desactivar sonido
+  if (altKey && key === 's') $('#sound-toggle').trigger('click');
+  
+  // Cerrar cuadro de diálogo abierto
+  if (key === 'Escape' && $('#ui-dialog').attr('class') === 'open') $('#ui-dialog-close').trigger('click');
 });
 
+
+/* Árbol de accesibilidad */
 
 // Establecer lenguaje del documento como español
 document.documentElement.lang = "es";
@@ -971,29 +986,6 @@ $('#story').insertBefore('#ui-bar');
 
 // Establecer barra lateral como landmark complementario
 $uiBar.attr('role', 'complementary');
-
-/* FUNCIONALIDADES */
-// Botón para silenciar SFX
-
-// $('#soundToggle')
-/*$button.on('click', function() {
-  State.variables.audio = !State.variables.audio;
-  
-  // Actualizar el botón
-  console.log($(this).text());
-  $(this).html(State.variables.audio ? '🔊' : '🔇');
-    
-  // Controlar el audio (versión simple)
-  document.querySelectorAll('audio').forEach(audio => {
-    audio.muted = !State.variables.audio;
-  });
-    
-  // Opcional: Mostrar notificación temporal
-  const notification = State.variables.audio 
-  	? 'Sonido ACTIVADO' 
-  	: 'Sonido DESACTIVADO';
-  $(document).trigger(':notify', notification);
-});*/
 
 :: StoryStylesheet [stylesheet]
 * {
