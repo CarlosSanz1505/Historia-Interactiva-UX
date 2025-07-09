@@ -8,8 +8,32 @@ Historia Interactiva
   "format": "SugarCube",
   "format-version": "2.37.3",
   "start": "Menú",
-  "zoom": 1
+  "zoom": 0.6
 }
+
+
+:: Acepto {"position":"2375,325","size":"100,100"}
+<p>Respondo con un simple “¡Voy!” al mensaje. Ahora bien <i> ¿Qué me pongo?</i></p>\
+\
+<p>Abro el armario y me quedo mirando la ropa por un rato. <i>¿Dará buena impresión esto? ¿Será demasiado simple aquello? Finalmente, escojo algo que me hace sentir cómodo.</i></p>\
+\
+<p>Miro el reloj. Aún tengo tiempo antes de salir, pero mi mente sigue dándole vueltas a lo mismo. <i>¿Y si luego me arrepiento?</i></p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Organizarte]]</li>\
+	</ul>\
+</nav>
+
+
+:: Acepto(Honestidad) {"position":"2375,575","size":"100,100"}
+<p>Acepto la invitación, pero no me siento bien. La cena de anoche sigue rondando en mi cabeza, y cada pensamiento me hace sentir más pequeño. Me pruebo casi todo el armario, nada parece correcto. Finalmente, escojo algo al azar, aunque no estoy convencido.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Llegar donde amigos(Honestidad)]]</li>\
+	</ul>\
+</nav>
 
 
 :: Atento a la charla {"position":"725,325","size":"100,100"}
@@ -94,7 +118,62 @@ Historia Interactiva
 </nav>
 
 
-:: Descanso {"position":"1750,175","size":"100,100"}
+:: Compra PIN {"position":"2800,700","size":"100,100"}
+<p>Compro el pin, aunque mis dudas no desaparecen. No sé qué quiero estudiar, pero no puedo dejar pasar esta oportunidad.</p>\
+\
+<p>El día del examen llega. Escucho cómo hablan de las carreras que eligieron. Mi pecho se aprieta, pero trato de no pensar demasiado en eso.</p>\
+\
+<p>Contesto las preguntas con nervios, avanzando como puedo. Cuando termino, salgo del salón con la cabeza llena de incertidumbre.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |No pase]]</li>\
+	</ul>\
+</nav>
+
+
+:: Contar o no {"position":"2850,175","size":"100,100"}
+<p>Miro a mis padres desde la sala, preguntándome si debería decirles. ¿Cómo reaccionarán? ¿Volverán a sermonearme?</p>\
+\
+<p>El nudo en mi garganta crece. Quiero hablar, pero el recuerdo de nuestras últimas charlas me detiene. </p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Seamos honestos|Decir la verdad]]</li>\
+        <li>[[Ocultar las cosas|Ocultar la verdad]]</li>\
+	</ul>\
+</nav>
+
+
+:: Decir la verdad {"position":"2975,25","size":"100,100"}
+<p>Les digo la verdad. Mis padres se entristecen, pero no me reprochan. Solo me piden que vaya a mi cuarto mientras ellos piensan qué hacer.</p>\
+\
+<p>Horas después, me llaman. “Hemos decidido inscribirte en un preuniversitario. Será una nueva oportunidad para prepararte”, dicen con una mezcla de firmeza y cariño.</p>\
+\
+<p>Aunque el camino no será fácil, siento un pequeño alivio. Tal vez esta vez sea diferente.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Fin |FIN]]</li>\
+	</ul>\
+</nav>
+
+
+:: Decision {"position":"2800,450","size":"100,100"}
+<p>Decido que es momento de dejar de dudar. Compro el pin del examen y siento una mezcla de emoción y nervios. Ya no hay marcha atrás.</p>\
+\
+<p>Cuando llego a casa me siento frente al escritorio, repasando mentalmente lo que debo estudiar.</p>\
+\
+<p>El tiempo pasa, y aunque la ansiedad sigue presente, ahora se mezcla con algo nuevo: determinación. Solo queda esperar a que llegue el día del examen.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Dia del examen]]</li>\
+	</ul>\
+</nav>
+
+
+:: Descanso {"position":"1775,175","size":"100,100"}
 <p>Miras las tareas sobre el escritorio. <i>¿Por qué no puedo empezar? ¿Qué me pasa?</i> Te das vueltas en la cama, cuestionándote por tu falta de voluntad.</p>\
 \
 <p>Agarras el celular para distraerte. Abres Instagram y empiezas a scrollear pero la culpa no desaparece. En el fondo, sabes que deberías estar haciendo otra cosa.</p>\
@@ -103,7 +182,7 @@ Historia Interactiva
 \
 <nav aria-label="Opciones de historia">\
 	<ul>\
-    	<li>[[Continuar|Invitación a salir]]</li>\
+    	<li>[[Continuar|Invitación a salir (rechazada)]]</li>\
 	</ul>\
 </nav>
 
@@ -116,6 +195,31 @@ Pero en el fondo sabes que estás evitando algo. Si pones atención, sabes que v
 Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. Solo dejas que el tiempo pase, esperando que la charla termine pronto.
 
 [[Continuar|Seguir deslizando]]
+
+
+:: Despertar {"position":"2225,100","size":"100,100"}
+<p>Al despertar, miro el celular sobre la mesa. Dudo si desbloquearlo. ¿Debería revisar? Podría haber mensajes o fotos de la reunión de anoche. La sola idea me incomoda.</p>\
+\
+<p>Si reviso, es posible que encuentre imágenes de mis amigos riendo, disfrutando mientras yo me quedé en casa. ¿Realmente quiero enfrentar eso? Pero no revisar también me deja intranquilo.</p>\
+\
+<p>Sigo mirando el teléfono, atrapado entre el deseo de saber y el miedo a sentirme peor.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Reviso el celular, igual algún día debo hacerlo. |Revisar celular]]</li>\
+        <li>[[Prefiero estar tranquilo por ahora y no reviso el celular.|Videojuegos]]</li>\
+	</ul>\
+</nav>
+
+
+:: Dia del examen {"position":"2925,450","size":"100,100"}
+<p>El día del examen llega más rápido de lo que imaginaba. Me siento nervioso, pero trato de mantener la calma. Entro al salón, tomo asiento y comienzo a responder. Las preguntas parecen interminables, pero doy lo mejor de mí.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Pase a la universidad]]</li>\
+	</ul>\
+</nav>
 
 
 :: Distraído {"position":"725,100","size":"100,100"}
@@ -173,14 +277,30 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 <<set $nivelAnsiedad to 10>><<if $audio>><<audio fondo_colegio play>><</if>>
 
 
-:: Estudio {"position":"1750,25","size":"100,100"}
+:: Estudio {"position":"1775,25","size":"100,100"}
 <p>Miras la pila de tareas pendientes. Suspiras, sabiendo que, si no empiezas ahora, mañana será peor, y comienzas a hacerlas. Al principio, te sientes abrumado. <i>¿Cómo dejé que se acumulara tanto?</i> Pero poco a poco, vas avanzando. La sensación de estar logrando algo empieza a reemplazar el estrés.</p>\
 \
-<p>Horas después, te sientes cansado, pero también un poco más tranquilo. <i>Al menos hice algo hoy</i>. Cierras los ojos, y esta vez, el sueño llega más rápido.</p>
+<p>Horas después, te sientes cansado, pero también un poco más tranquilo. <i>Al menos hice algo hoy</i>. Cierras los ojos, y esta vez, el sueño llega más rápido.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Invitación a salir]]</li>\
+	</ul>\
+</nav>\
+
+
+:: FIN {"position":"3350,575","size":"100,100"}
+<p>FIN</p>
 
 
 :: Habitación {"position":"1625,325","size":"100,100"}
-<p>Después de cenar, subes a tu habitación y te recuestas en la cama. Piensas en lo aprendido y sientes que fue un buen día. Ahora sabes que puedes empezar a construir tu futuro paso a paso.</p>
+<p>Después de cenar, subes a tu habitación y te recuestas en la cama. Piensas en lo aprendido y sientes que fue un buen día. Ahora sabes que puedes empezar a construir tu futuro paso a paso.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Invitación a salir]]</li>\
+	</ul>\
+</nav>\
 
 
 :: Hablando en público {"position":"875,325","size":"100,100"}
@@ -233,12 +353,66 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 </nav>
 
 
-:: Invitación a salir {"position":"1900,100","size":"100,100"}
+:: Invitación a salir {"position":"2100,400","size":"100,100"}
+<p>Al despertar veo el celular, es temprano, pero ya hay un mensaje en el grupo de amigos: “Vamos a comer algo más tarde. ¿Quién se apunta?”</p>\
+\
+<p>Me quedo mirando el mensaje por un rato. <i>¿Debería ir?</i> La idea de salir parece tentadora; tal vez podría distraerme un poco, dejar de pensar tanto. Pero entonces las dudas aparecen: <i>¿Y si no sé de qué hablar? ¿Y si parezco aburrido? ¿Realmente quiero salir o solo estoy buscando escapar de algo más?</i></p>\
+\
+<p>Respiro hondo, <i>¿Debería o no ir?</i></p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<<if $honestidad is true>>\
+        	<li>[[No me siento animado, pero vamos|Acepto(Honestidad)]]</li>\
+        	<li>[[No tengo ánimos, quedémonos en casa |Rechazo(Honestidad)]]</li>\
+		<<else>>\
+        	<li>[[Voy a ir, quiero divertirme con mis amigos|Acepto]]</li>\
+        	<li>[[Que pereza, mejor me quedo en casa |Rechazo]]</li>\
+        <</if>>
+	</ul>\
+</nav>
+
+
+:: Invitación a salir (rechazada) {"position":"2100,100","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/invitacion_salir.webp"></div>\
+\
 <p>Mientras intentas dormirte, el celular vibra. ¿Quién será a esta hora? Lo agarras y desbloqueas la pantalla. Es un mensaje de tus amigos: "¿Vamos a comer algo? Nos vemos en 20 minutos."</p>\
 \
 <p>Respondes con un simple: "No puedo, tal vez otro día." Dejas el celular en su lugar y te das cuenta que perdiste el poco sueño que tenías. Los pensamientos vuelven: <i>¿Cómo voy a encontrar algo que me guste? ¿Qué pasa si me quedo estancado?</i></p>\
 \
-<p>Finalmente, el cansancio te vence. Te despiertas agotado, como si la noche apenas hubiera sido un parpadeo.</p>
+<p>Finalmente, el cansancio te vence. Te despiertas agotado, como si la noche apenas hubiera sido un parpadeo.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Despertar]]</li>\
+	</ul>\
+</nav>
+
+
+:: Ir a la sala {"position":"2525,450","size":"100,100"}
+<p>Voy a la sala y trato de distraerme buscando una película para ver, pero nada parece interesante.</p>\
+\
+<p>Después de un rato, abro YouTube y empiezo a buscar recomendaciones. Veo algunos videos, pero la sensación de vacío no desaparece.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Viendo Soul]]</li>\
+	</ul>\
+</nav>
+
+
+:: Ir al comedor {"position":"2550,175","size":"100,100"}
+<p>Mis padres me llaman al comedor.</p>\
+\
+<p>“¿Cuándo vas a tomar esto en serio?” pregunta mi papá. “Tu futuro está en juego”, añade mi mamá.</p>\
+\
+<p>Bajo la mirada, sintiéndome pequeño. No tengo respuestas, solo un nudo en el pecho mientras intento procesar sus palabras.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|No compraste el PIN]]</li>\
+	</ul>\
+</nav>
 
 
 :: Irse al cuarto {"position":"1625,100","size":"100,100"}
@@ -250,6 +424,28 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	<ul>\
     	<li>[[Es mejor terminar las tareas y estar libre para el ocio|Estudio]]</li>\
         <li>[[Ha sido un día muy pesado y mereces descansar|Descanso][$nivelAnsiedad += 10]]</li>\
+	</ul>\
+</nav>
+
+
+:: Llegada donde los amigos {"position":"2675,325","size":"100,100"}
+<p>Decido ir y pido un carro. Cuando finalmente llego, ya todos están sentados y riendo. Me disculpo rápido: “Perdón por la tardanza, el tráfico estaba terrible.”</p>\
+\
+<p>Ellos me dicen que no pasa nada, pero sigo sintiéndome fuera de lugar. Me tomo un momento para tratar de relajarme y unirme a la conversación.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Vuelve a casa]]</li>\
+	</ul>\
+</nav>
+
+
+:: Llegar donde amigos(Honestidad) {"position":"2525,575","size":"100,100"}
+<p>Pido un carro y llego tarde. Al entrar, saludo a mis amigos con una sonrisa forzada. Ellos siguen conversando animadamente, pero yo me siento fuera de lugar, respondiendo lo mínimo y esperando que la reunión termine pronto.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Salida con amigos]]</li>\
 	</ul>\
 </nav>
 
@@ -287,6 +483,60 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 </nav>
 
 
+:: Mesero {"position":"2925,825","size":"100,100"}
+<p>Decido salir. Camino sin rumbo hasta que un letrero llama mi atención: “Se necesita mesero”. Me detengo frente a la puerta, dudando. <i>¿Y si no soy bueno para esto? ¿Debería intentarlo?</i></p>\
+\
+<p>Finalmente, entro y pregunto por el trabajo. Para mi sorpresa, me lo dan. Los primeros días son difíciles, pero poco a poco comienzo a sentirme útil, a entender que no necesito tener todo claro ahora mismo.</p>\
+\
+<p>Con cada día que pasa, descubro más sobre mí mismo, sobre lo que me gusta y lo que no. Tal vez no encontré una respuesta inmediata, pero siento que voy en el camino correcto.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Fin |FIN]]</li>\
+	</ul>\
+</nav>
+
+
+:: No compra el pin {"position":"2675,825","size":"100,100"}
+<p>No compro el pin. En lugar de eso, me quedo pensando en qué más puedo hacer. Las dudas me consumen, pero sé que no estoy listo para tomar una decisión.</p>\
+\
+<p>Esa noche, se lo cuento a mis padres. Sus rostros muestran preocupación. “No estamos de acuerdo, Toño, pero entendemos que necesitas tiempo”, dice mi mamá.</p>\
+\
+<p>Sus palabras me reconfortan un poco, aunque el peso de la incertidumbre sigue ahí. ¿Cuánto tiempo más podré evitar decidir?</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Mesero]]</li>\
+	</ul>\
+</nav>
+
+
+:: No compraste el PIN {"position":"2700,175","size":"100,100"}
+<p>Los días pasan, y me doy cuenta de que la fecha para comprar el pin ya pasó.</p>\
+\
+<p>Un vacío se forma en mi pecho. ¿Por qué no tomé la decisión a tiempo? Intento culpar a otros, pero sé que fue mi indecisión. El peso de haber perdido esta oportunidad no me deja en paz.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Contar o no]]</li>\
+	</ul>\
+</nav>
+
+
+:: No pase {"position":"2925,700","size":"100,100"}
+<p>Pasan los días y llega el resultado: No pasaste. Mi corazón se hunde, y las dudas vuelven a invadirme.</p>\
+\
+<p>Reúno valor y se lo cuento a mis padres. Para mi sorpresa, me apoyan. “No te preocupes, hay más oportunidades”, dice mi mamá con una sonrisa.</p>\
+\
+<p>Sus palabras alivian un poco el peso. Aunque fallé, me doy cuenta de que no estoy solo. Aún puedo intentarlo de nuevo.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Fin |FIN]]</li>\
+	</ul>\
+</nav>
+
+
 :: No responder {"position":"1475,25","size":"100,100"}
 <div class="contenedor-imagen"><img src="imagenes/no_responder.webp></div>\
 \
@@ -318,6 +568,47 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 <<if $audio>><<audio suspiro play>><</if>>
 
 
+:: Ocultar la verdad {"position":"2975,175","size":"100,100"}
+<p>Les miento. Les digo que ya me inscribí y que todo está bajo control. Ellos parecen tranquilos, pero yo no lo estoy. Esa noche no logro dormir. La culpa me consume.</p>\
+\
+<p>Pasan los días, pero la sensación no desaparece. Me siento igual de perdido, dudando de mis capacidades y de lo que realmente soy capaz de lograr.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Trabajar con papa]]</li>\
+	</ul>\
+</nav>
+
+
+:: Organizarte {"position":"2525,325","size":"100,100"}
+<p>Estoy listo, pero algo no se siente bien. Miro el celular. ¿Y si cancelo? Mi mente empieza a imaginar lo peor: conversaciones incómodas, sonrisas forzadas, sentirme fuera de lugar.</p>\
+\
+<p>El reloj avanza, y sigo dudando. Quizás debería quedarme… pero ya dije que iría. Me quedo sentado, atrapado entre salir o quedarme, mientras la ansiedad no me deja decidir.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Iré a la reunión, ¿Qué es lo peor que puede pasar?|Llegada donde los amigos]]</li>\
+        <li>[[No esta mal quedarse en casa, me quiero ver una peli|Ir a la sala]]</li>\
+	</ul>\
+</nav>
+
+
+:: Pase a la universidad {"position":"3050,450","size":"100,100"}
+<p>Pasan días, y finalmente, los resultados están disponibles. Con el corazón latiendo fuerte, reviso la página.</p>\
+\
+<p>¡Pasé!</p>\
+\
+<p>Una sensación de alivio y felicidad me invade.</p>\
+\
+<p>Corro a contarles a mis padres. Sus caras se iluminan, y sus palabras de orgullo me hacen sentir que todo valió la pena. Por primera vez en mucho tiempo, siento que puedo enfrentar lo que viene.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Fin |FIN]]</li>\
+	</ul>\
+</nav>
+
+
 :: PassageHeader {"position":"100,225","size":"100,100"}
 <<if State.active.title isnot "Menú">><<set _n to $nivelAnsiedad>><div class="barra-ansiedad" @style="`background-color: hsl(${100-_n}, 100%, 20%)`">
   Nivel de Ansiedad: <span id="ansiedad-num"><<= $nivelAnsiedad>>%</span>
@@ -326,10 +617,28 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 <</if>><<button "🔊">><<if $audio>><<audio ":all" volume 0>><<else>><<audio ":all" volume 1>><</if>><<set $audio to not $audio>><</button>>
 
 
+:: Pedir comida {"position":"2800,575","size":"100,100"}
+<p>Cuando llega el momento de pedir comida, elijo lo primero que veo en el menú sin pensarlo. Estoy desconectado hasta que un amigo me pregunta: “¿Estás bien?”</p>\
+\
+<p><i>“Sí, todo bien”</i>, miento, forzando una sonrisa. No quiero que noten lo que realmente siento. Después de un rato, me excuso y me voy a casa.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Revisar correo]]</li>\
+	</ul>\
+</nav>
+
+
 :: Pesadilla {"position":"1775,475","size":"100,100"}
 <p>Te quedas dormido y sueñas que estás caminando por un pasillo. Hay puertas cerradas cada una con un letrero: "Medicina", "Ingeniería", "Arte". Tratas de abrir una, pero están bloqueadas, y la sensación de urgencia crece, una gran puerta con la palabra “Futuro” aparece frente a ti. La abres, y detrás solo hay un abismo oscuro. Sientes que caes, y el vacío se apodera de ti.</p>\
 \
-<p>Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. <i>Por lo menos ya amaneció…</i></p>
+<p>Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. <i>Por lo menos ya amaneció…</i></p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Invitación a salir]]</li>\
+	</ul>\
+</nav>\
 
 
 :: Preguntar a un amigo {"position":"875,625","size":"100,100"}
@@ -343,6 +652,36 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	<ul>\
     	<li>[[Continuar|Cena familiar]]</li>
 	</ul>
+</nav>
+
+
+:: Rechazo {"position":"2375,450","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/viendo_soul.webp"></div>\
+\
+<p>Escribo: <i>“No puedo hoy, tal vez en otra ocasión”</i>.</p>\
+\
+<p>No quiero ver las respuestas ni pensar en cómo reaccionarán mis amigos, así que dejo el celular a un lado.</p>\
+\
+<p>Me recuesto en la cama, mirando el techo. <i>¿Por qué no fui? Tal vez me hubiera distraído, tal vez habría sido bueno. Pero la idea de salir me parecía demasiado pesada.</i></p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Ir a la sala]]</li>\
+	</ul>\
+</nav>
+
+
+:: Rechazo(Honestidad) {"position":"2375,700","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/viendo_salida_amigos.webp"></div>\
+\
+<p>No acepto ir. Me quedo en casa, acostado en el sofá de la sala, mirando el techo. Intento buscar algo para ver en internet, pero nada me interesa.</p>\
+\
+<p>La cena de anoche no deja de dar vueltas en mi cabeza. Cada detalle, cada palabra, me pesa más. ¿Por qué no puedo simplemente superar esto? El día pasa lento, con una sensación de vacío que parece no desaparecer.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Viendo salida amigos]]</li>\
+	</ul>\
 </nav>
 
 
@@ -382,6 +721,44 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 </nav>
 
 
+:: Revisar celular {"position":"2400,25","size":"100,100"}
+<p>Desbloqueo el celular y veo el mensaje del grupo: “¡La pasamos increíble!” Hay varias fotos adjuntas.</p>\
+\
+<p>Mi dedo se queda sobre la pantalla, dudando si abrirlas o no. ¿Realmente quiero verlas? La ansiedad comienza a crecer mientras sigo mirando el mensaje.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos]]</li>\
+        <li>[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Sentirse mal en el cuarto]]</li>\
+	</ul>\
+</nav>
+
+
+:: Revisar correo {"position":"2675,700","size":"100,100"}
+<p>Luego de un rato reviso mi correo. Una notificación llama mi atención: Último día para comprar el pin del examen.</p>\
+\
+<p>Mi pecho se aprieta. <i>¿Es ahora o nunca? Las dudas vuelven a invadirme. ¿Estoy listo? ¿Qué pasa si fracaso? ¿Y si no es lo que quiero?</i></p>\
+\
+<p>No sé qué hacer. Mi mente repite todos los momentos de estos últimos días: la cena, mis amigos, mis propios pensamientos. <i>¿De verdad estoy preparado para dar este paso?</i></p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[99% de fe 1% de probabilidad, compro el pin |Compra PIN]]</li>\
+        <li>[[No estoy preparado, en otra ocasión será. |No compra el pin]]</li>\
+	</ul>\
+</nav>
+
+
+:: Salida con amigos {"position":"2675,575","size":"100,100"}
+<p>Mientras estoy con mis amigos, los escucho hablar sobre sus planes: universidades, carreras, sueños. Mi mente se compara con ellos, y el nudo en mi pecho se hace más grande. ¿Por qué ellos parecen tenerlo todo tan claro y yo no?</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Pedir comida]]</li>\
+	</ul>\
+</nav>
+
+
 :: Seguir deslizando {"position":"1100,25","size":"100,100"}
 <p>La charla termina, pero apenas lo notas. Cruzas el patio del colegio sin prestar mucha atención a nada. Escuchas a algunos compañeros comentar sobre la charla, pero no te detienes. Todo parece seguir su curso sin involucrarte.</p>\
 \
@@ -413,7 +790,27 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Llegas a tu cuarto sintiéndote peor que nunca, mientras piensas: <i>¿Por qué soy así? ¿Por qué no puedo hacer lo correcto?</i></p>\
 <p>Piensas en tus padres: <i>¿Qué estarán diciendo de mí ahora? ¿Qué pasa si siempre los decepciono?</i> Tu futuro parece más confuso que nunca. <i>¿Cómo voy a encontrar algo que me guste? ¿Y si nunca lo hago?</i></p>\
-<p>El cansancio finalmente te vence, y te quedas dormido, pero las dudas siguen ahí, rondando como un eco en tu mente.</p>
+<p>El cansancio finalmente te vence, y te quedas dormido, pero las dudas siguen ahí, rondando como un eco en tu mente.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Invitación a salir]]</li>\
+	</ul>\
+</nav>\
+
+
+:: Sentirse mal en el cuarto {"position":"2700,25","size":"100,100"}
+<p>Me encierro en mi cuarto. Todo lo que pasó hoy sigue rondando en mi cabeza ¿Por qué no puedo ser como los demás? ¿Por qué siempre sobrepienso todo?</p>\
+\
+<p>Siento un nudo en el pecho que no desaparece. Trato de calmarme, pero mi mente no para: ¿Qué pasa si siempre soy así? ¿Si nunca logro avanzar?</p>\
+\
+<p>Me recuesto, deseando que los pensamientos se detengan, pero solo encuentro más preguntas sin respuesta.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|No compraste el PIN]]</li>\
+	</ul>\
+</nav>
 
 
 :: StoryDisplayTitle {"position":"100,475","size":"100,100"}
@@ -452,6 +849,82 @@ Sub~~script~~
 !!!!Level 4 Heading
 !!!!!Level 5 Heading
 !!!!!!Level 6 Heading
+
+
+:: Trabajar con papa {"position":"3125,175","size":"100,100"}
+<p>Días después, mis padres van a la universidad para preguntar sobre mis resultados. Allí descubren la verdad: nunca me inscribí.</p>\
+\
+<p>Cuando llegan a casa, mi papá me mira con seriedad. “Mañana vienes a trabajar conmigo”, dice. No hay gritos, solo una firme decisión.</p>\
+\
+<p>Al día siguiente, empiezo a trabajar a su lado. Es duro, y cada tarea me hace reflexionar. Aunque al principio me resiento, poco a poco entiendo que esto es una lección para valorar las oportunidades que tengo.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Fin |FIN]]</li>\
+	</ul>\
+</nav>
+
+
+:: Videojuegos {"position":"2400,175","size":"100,100"}
+<p>Decido no revisar el celular y voy a la sala. Enciendo la consola para distraerme con un videojuego, pero no llevo mucho tiempo jugando cuando mis padres me ven.</p>\
+\
+<p>“¿Otra vez jugando? ¿Y el estudio?” pregunta mi papá con el ceño fruncido. Bajo el control, sintiendo cómo el peso de su desaprobación se suma al nudo en mi pecho. ¿Por qué nunca puedo hacer las cosas bien?</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Ir al comedor]]</li>\
+	</ul>\
+</nav>
+
+
+:: Viendo Soul {"position":"2675,450","size":"100,100"}
+<p>Después de mucho buscar, encuentro "Soul" en una plataforma. La veo con curiosidad, pero pronto me cautiva. Sus mensajes sobre el propósito de la vida y la importancia de disfrutar el presente me tocan profundamente.</p>\
+\
+<p>Para cuando termina, tengo lágrimas en los ojos. Tal vez no necesito tenerlo todo resuelto ahora mismo. Por primera vez en mucho tiempo, siento algo diferente: alivio.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Decision]]</li>\
+	</ul>\
+</nav>
+
+
+:: Viendo fotos salida amigos {"position":"2550,25","size":"100,100"}
+<p>Finalmente, abro las fotos. Los veo riendo, disfrutando. Me arrepiento de no haber ido. ¿Por qué dejé que mi ansiedad me controlara otra vez?</p>\
+\
+<p>Me quedo mirando la pantalla, cuestionándome. ¿Por qué soy así? ¿Por qué todo parece tan difícil para mí? Respiro hondo, sabiendo que algo tiene que cambiar, pero sin tener claro por dónde empezar.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Sentirse mal en el cuarto]]</li>\
+	</ul>\
+</nav>
+
+
+:: Viendo salida amigos {"position":"2525,700","size":"100,100"}
+<p>Horas después, reviso mi celular para distraerme. Entre notificaciones, aparecen fotos de la reunión: mis amigos riendo, disfrutando de la comida. Me detengo a mirarlas y siento un nudo en el estómago.</p>\
+\
+<p>Debería haber ido. Me convenzo de que habría sido mejor que quedarme en casa. El arrepentimiento se mezcla con la sensación de haber desperdiciado otro día.</p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar |Revisar correo]]</li>\
+	</ul>\
+</nav>
+
+
+:: Vuelve a casa {"position":"2800,325","size":"100,100"}
+<p>Mientras escucho a mis amigos, noto que hablan sobre el futuro: carreras, opciones, dudas. Me sorprende darme cuenta de que no soy el único con incertidumbres.</p>\
+\
+<p>Cuando llega el momento de pedir comida, me toma demasiado decidir.</p>\
+\
+<p><i>¿Por qué siempre me cuesta tanto?</i> La indecisión me recuerda a la universidad, y un nudo en el pecho comienza a formarse. Termino pidiendo lo que me recomiendan mis amigos, la charla continua un rato y después vuelvo a casa feliz de haber visto a mis amigos. </p>\
+\
+<nav class="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Decision]]</li>\
+	</ul>\
+</nav>
 
 
 :: StoryScript [script]
