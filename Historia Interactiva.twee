@@ -19,7 +19,7 @@ Historia Interactiva
 \
 <p>Miro el reloj. Aún tengo tiempo antes de salir, pero mi mente sigue dándole vueltas a lo mismo. <i>¿Y si luego me arrepiento?</i></p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Organizarte]]</li>\
 	</ul>\
@@ -29,7 +29,7 @@ Historia Interactiva
 :: Acepto(Honestidad) {"position":"2375,575","size":"100,100"}
 <p>Acepto la invitación, pero no me siento bien. La cena de anoche sigue rondando en mi cabeza, y cada pensamiento me hace sentir más pequeño. Me pruebo casi todo el armario, nada parece correcto. Finalmente, escojo algo al azar, aunque no estoy convencido.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Llegar donde amigos(Honestidad)]]</li>\
 	</ul>\
@@ -125,7 +125,7 @@ Historia Interactiva
 \
 <p>Contesto las preguntas con nervios, avanzando como puedo. Cuando termino, salgo del salón con la cabeza llena de incertidumbre.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |No pase]]</li>\
 	</ul>\
@@ -137,7 +137,7 @@ Historia Interactiva
 \
 <p>El nudo en mi garganta crece. Quiero hablar, pero el recuerdo de nuestras últimas charlas me detiene. </p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Seamos honestos|Decir la verdad]]</li>\
         <li>[[Ocultar las cosas|Ocultar la verdad]]</li>\
@@ -152,7 +152,7 @@ Historia Interactiva
 \
 <p>Aunque el camino no será fácil, siento un pequeño alivio. Tal vez esta vez sea diferente.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Fin |FIN]]</li>\
 	</ul>\
@@ -166,7 +166,7 @@ Historia Interactiva
 \
 <p>El tiempo pasa, y aunque la ansiedad sigue presente, ahora se mezcla con algo nuevo: determinación. Solo queda esperar a que llegue el día del examen.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Dia del examen]]</li>\
 	</ul>\
@@ -194,7 +194,11 @@ Pero en el fondo sabes que estás evitando algo. Si pones atención, sabes que v
 
 Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. Solo dejas que el tiempo pase, esperando que la charla termine pronto.
 
-[[Continuar|Seguir deslizando]]
+<nav aria-label="Opciones de historia">\
+	<ul>\
+    	<li>[[Continuar|Seguir deslizando]]</li>\
+	</ul>\
+</nav>
 
 
 :: Despertar {"position":"2225,100","size":"100,100"}
@@ -204,7 +208,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Sigo mirando el teléfono, atrapado entre el deseo de saber y el miedo a sentirme peor.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Reviso el celular, igual algún día debo hacerlo. |Revisar celular]]</li>\
         <li>[[Prefiero estar tranquilo por ahora y no reviso el celular.|Videojuegos]]</li>\
@@ -215,7 +219,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 :: Dia del examen {"position":"2925,450","size":"100,100"}
 <p>El día del examen llega más rápido de lo que imaginaba. Me siento nervioso, pero trato de mantener la calma. Entro al salón, tomo asiento y comienzo a responder. Las preguntas parecen interminables, pero doy lo mejor de mí.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Pase a la universidad]]</li>\
 	</ul>\
@@ -282,7 +286,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Horas después, te sientes cansado, pero también un poco más tranquilo. <i>Al menos hice algo hoy</i>. Cierras los ojos, y esta vez, el sueño llega más rápido.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
@@ -296,7 +300,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 :: Habitación {"position":"1625,325","size":"100,100"}
 <p>Después de cenar, subes a tu habitación y te recuestas en la cama. Piensas en lo aprendido y sientes que fue un buen día. Ahora sabes que puedes empezar a construir tu futuro paso a paso.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
@@ -360,7 +364,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Respiro hondo, <i>¿Debería o no ir?</i></p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<<if $honestidad is true>>\
         	<li>[[No me siento animado, pero vamos|Acepto(Honestidad)]]</li>\
@@ -382,7 +386,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Finalmente, el cansancio te vence. Te despiertas agotado, como si la noche apenas hubiera sido un parpadeo.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Despertar]]</li>\
 	</ul>\
@@ -394,7 +398,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Después de un rato, abro YouTube y empiezo a buscar recomendaciones. Veo algunos videos, pero la sensación de vacío no desaparece.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Viendo Soul]]</li>\
 	</ul>\
@@ -408,7 +412,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Bajo la mirada, sintiéndome pequeño. No tengo respuestas, solo un nudo en el pecho mientras intento procesar sus palabras.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|No compraste el PIN]]</li>\
 	</ul>\
@@ -433,7 +437,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Ellos me dicen que no pasa nada, pero sigo sintiéndome fuera de lugar. Me tomo un momento para tratar de relajarme y unirme a la conversación.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Vuelve a casa]]</li>\
 	</ul>\
@@ -443,7 +447,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 :: Llegar donde amigos(Honestidad) {"position":"2525,575","size":"100,100"}
 <p>Pido un carro y llego tarde. Al entrar, saludo a mis amigos con una sonrisa forzada. Ellos siguen conversando animadamente, pero yo me siento fuera de lugar, respondiendo lo mínimo y esperando que la reunión termine pronto.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Salida con amigos]]</li>\
 	</ul>\
@@ -465,7 +469,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
         <li><a target="_blank" href="https://www.mayoclinic.org/es/diseases-conditions/anxiety/diagnosis-treatment/drc-20350967">Trastornos de ansiedad (Diagnóstico y tratamiento)</a> - <i>Mayo Clinic</i></li>
     </ul>\
     \
-    <p class="save-disclaimer"><strong>Tu progreso siempre será guardado automáticamente</strong>, así que si en algún momento te sientes incómodo o afectado, puedes <em>cerrar la pestaña</em> en tu navegador para abandonar la experiencia sin preocuparte por perder tu avance.</p>\
+    <p class="save-disclaimer"><strong>Tu progreso siempre será guardado automáticamente</strong>, así que si en algún momento te sientes incómodo o afectado, puedes <em>cerrar la pestaña</em> en tu navegador para abandonar la experiencia sin preocuparte por perder tu avance. Cuando desees continuar el juego, en la barra lateral tendrás la opción de <em>REINICIAR</em> la historia, y podrás visualizar el botón de <em>CONTINUAR</em> para recuperar tu avance.</p>\
 </div>\
 <p>Algunas consideraciones para usuarios con lector de pantalla:</p>\
 <ul>\
@@ -490,7 +494,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Con cada día que pasa, descubro más sobre mí mismo, sobre lo que me gusta y lo que no. Tal vez no encontré una respuesta inmediata, pero siento que voy en el camino correcto.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Fin |FIN]]</li>\
 	</ul>\
@@ -504,7 +508,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Sus palabras me reconfortan un poco, aunque el peso de la incertidumbre sigue ahí. ¿Cuánto tiempo más podré evitar decidir?</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Mesero]]</li>\
 	</ul>\
@@ -516,7 +520,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Un vacío se forma en mi pecho. ¿Por qué no tomé la decisión a tiempo? Intento culpar a otros, pero sé que fue mi indecisión. El peso de haber perdido esta oportunidad no me deja en paz.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Contar o no]]</li>\
 	</ul>\
@@ -530,7 +534,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Sus palabras alivian un poco el peso. Aunque fallé, me doy cuenta de que no estoy solo. Aún puedo intentarlo de nuevo.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Fin |FIN]]</li>\
 	</ul>\
@@ -573,7 +577,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Pasan los días, pero la sensación no desaparece. Me siento igual de perdido, dudando de mis capacidades y de lo que realmente soy capaz de lograr.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Trabajar con papa]]</li>\
 	</ul>\
@@ -585,7 +589,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>El reloj avanza, y sigo dudando. Quizás debería quedarme… pero ya dije que iría. Me quedo sentado, atrapado entre salir o quedarme, mientras la ansiedad no me deja decidir.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Iré a la reunión, ¿Qué es lo peor que puede pasar?|Llegada donde los amigos]]</li>\
         <li>[[No esta mal quedarse en casa, me quiero ver una peli|Ir a la sala]]</li>\
@@ -602,7 +606,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Corro a contarles a mis padres. Sus caras se iluminan, y sus palabras de orgullo me hacen sentir que todo valió la pena. Por primera vez en mucho tiempo, siento que puedo enfrentar lo que viene.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Fin |FIN]]</li>\
 	</ul>\
@@ -610,11 +614,14 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: PassageHeader {"position":"100,225","size":"100,100"}
-<<if State.active.title isnot "Menú">><<set _n to $nivelAnsiedad>><div class="barra-ansiedad" @style="`background-color: hsl(${100-_n}, 100%, 20%)`">
-  Nivel de Ansiedad: <span id="ansiedad-num"><<= $nivelAnsiedad>>%</span>
-  <!-- <div class="barra-ansiedad l $nivelAnsiedad"></div> -->
-</div>
-<</if>><<button "🔊">><<if $audio>><<audio ":all" volume 0>><<else>><<audio ":all" volume 1>><</if>><<set $audio to not $audio>><</button>>
+<<button "🔊">><<if $audio>><<audio ":all" volume 0>><<else>><<audio ":all" volume 1>><</if>><<set $audio to not $audio>><</button>>\
+<<if State.active.title isnot "Menú">>\
+	<<set _n to $nivelAnsiedad>>\
+    <div class="barra-ansiedad" @style="`background-color: hsl(${100-_n}, 100%, 20%)`">\
+		Nivel de Ansiedad: <span id="ansiedad-num"><<= $nivelAnsiedad>>%</span>\
+	</div>\
+    <<script>>Save.browser.slot.save(0);<</script>>\
+<</if>>
 
 
 :: Pedir comida {"position":"2800,575","size":"100,100"}
@@ -622,7 +629,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p><i>“Sí, todo bien”</i>, miento, forzando una sonrisa. No quiero que noten lo que realmente siento. Después de un rato, me excuso y me voy a casa.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Revisar correo]]</li>\
 	</ul>\
@@ -634,7 +641,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. <i>Por lo menos ya amaneció…</i></p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
@@ -664,7 +671,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Me recuesto en la cama, mirando el techo. <i>¿Por qué no fui? Tal vez me hubiera distraído, tal vez habría sido bueno. Pero la idea de salir me parecía demasiado pesada.</i></p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Ir a la sala]]</li>\
 	</ul>\
@@ -678,7 +685,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>La cena de anoche no deja de dar vueltas en mi cabeza. Cada detalle, cada palabra, me pesa más. ¿Por qué no puedo simplemente superar esto? El día pasa lento, con una sensación de vacío que parece no desaparecer.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Viendo salida amigos]]</li>\
 	</ul>\
@@ -726,7 +733,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Mi dedo se queda sobre la pantalla, dudando si abrirlas o no. ¿Realmente quiero verlas? La ansiedad comienza a crecer mientras sigo mirando el mensaje.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos]]</li>\
         <li>[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Sentirse mal en el cuarto]]</li>\
@@ -741,7 +748,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>No sé qué hacer. Mi mente repite todos los momentos de estos últimos días: la cena, mis amigos, mis propios pensamientos. <i>¿De verdad estoy preparado para dar este paso?</i></p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[99% de fe 1% de probabilidad, compro el pin |Compra PIN]]</li>\
         <li>[[No estoy preparado, en otra ocasión será. |No compra el pin]]</li>\
@@ -752,7 +759,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 :: Salida con amigos {"position":"2675,575","size":"100,100"}
 <p>Mientras estoy con mis amigos, los escucho hablar sobre sus planes: universidades, carreras, sueños. Mi mente se compara con ellos, y el nudo en mi pecho se hace más grande. ¿Por qué ellos parecen tenerlo todo tan claro y yo no?</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Pedir comida]]</li>\
 	</ul>\
@@ -792,7 +799,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 <p>Piensas en tus padres: <i>¿Qué estarán diciendo de mí ahora? ¿Qué pasa si siempre los decepciono?</i> Tu futuro parece más confuso que nunca. <i>¿Cómo voy a encontrar algo que me guste? ¿Y si nunca lo hago?</i></p>\
 <p>El cansancio finalmente te vence, y te quedas dormido, pero las dudas siguen ahí, rondando como un eco en tu mente.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
@@ -806,7 +813,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <p>Me recuesto, deseando que los pensamientos se detengan, pero solo encuentro más preguntas sin respuesta.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|No compraste el PIN]]</li>\
 	</ul>\
@@ -858,7 +865,7 @@ Sub~~script~~
 \
 <p>Al día siguiente, empiezo a trabajar a su lado. Es duro, y cada tarea me hace reflexionar. Aunque al principio me resiento, poco a poco entiendo que esto es una lección para valorar las oportunidades que tengo.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Fin |FIN]]</li>\
 	</ul>\
@@ -870,7 +877,7 @@ Sub~~script~~
 \
 <p>“¿Otra vez jugando? ¿Y el estudio?” pregunta mi papá con el ceño fruncido. Bajo el control, sintiendo cómo el peso de su desaprobación se suma al nudo en mi pecho. ¿Por qué nunca puedo hacer las cosas bien?</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Ir al comedor]]</li>\
 	</ul>\
@@ -882,7 +889,7 @@ Sub~~script~~
 \
 <p>Para cuando termina, tengo lágrimas en los ojos. Tal vez no necesito tenerlo todo resuelto ahora mismo. Por primera vez en mucho tiempo, siento algo diferente: alivio.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Decision]]</li>\
 	</ul>\
@@ -894,7 +901,7 @@ Sub~~script~~
 \
 <p>Me quedo mirando la pantalla, cuestionándome. ¿Por qué soy así? ¿Por qué todo parece tan difícil para mí? Respiro hondo, sabiendo que algo tiene que cambiar, pero sin tener claro por dónde empezar.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Sentirse mal en el cuarto]]</li>\
 	</ul>\
@@ -906,7 +913,7 @@ Sub~~script~~
 \
 <p>Debería haber ido. Me convenzo de que habría sido mejor que quedarme en casa. El arrepentimiento se mezcla con la sensación de haber desperdiciado otro día.</p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar |Revisar correo]]</li>\
 	</ul>\
@@ -920,7 +927,7 @@ Sub~~script~~
 \
 <p><i>¿Por qué siempre me cuesta tanto?</i> La indecisión me recuerda a la universidad, y un nudo en el pecho comienza a formarse. Termino pidiendo lo que me recomiendan mis amigos, la charla continua un rato y después vuelvo a casa feliz de haber visto a mis amigos. </p>\
 \
-<nav class="Opciones de historia">\
+<nav aria-label="Opciones de historia">\
 	<ul>\
     	<li>[[Continuar|Decision]]</li>\
 	</ul>\
@@ -930,18 +937,116 @@ Sub~~script~~
 :: StoryScript [script]
 const $uiBar = $('#ui-bar');
 const $uiBarBody = $('#ui-bar-body');
+let contentAdded = false;
+let hotkeysDialog;
 
-// Re-ubicar botón de audio
+// Función para crear y abrir instructivo de atajos
+function createHotkeysDialog() {
+  hotkeysDialog = Dialog.create('Atajos');
+  hotkeysDialog.append('\
+	<table>\
+		<caption>Lista de combinaciones de teclas para acceder a funcionalidades de la historia fácilmente</caption>\
+		<thead>\
+			<tr>\
+				<th scope="col">Combinación</th>\
+				<th scope="col">Función</th>\
+			</tr>\
+		</thead>\
+		<tbody>\
+			<tr>\
+				<td><span>Ctrl + B</span></td>\
+				<td>Mostrar o esconder barra lateral</td>\
+			</tr>\
+			<tr>\
+				<td><span aria-label="ctrl + flecha izquierda"><span aria-hidden="true">Ctrl + ←</span></span></td>\
+				<td>Ir a escena anterior</td>\
+			</tr>\
+			<tr>\
+				<td><span aria-label="ctrl + flecha derecha"><span aria-hidden="true">Ctrl + →</span></span></td>\
+				<td>Ir a escena siguiente (visitada)</td>\
+			</tr>\
+			<tr>\
+				<td><span>Alt + C</span></td>\
+				<td><em>Continuar</em> historia</td>\
+			</tr>\
+			<tr>\
+				<td><span>Alt + R</span></td>\
+				<td><em>Reiniciar</em> historia</td>\
+			</tr>\
+			<tr>\
+				<td><span>Alt + A</span></td>\
+				<td>Ver <em>Atajos</em></td>\
+			</tr>\
+			<tr>\
+				<td><span>Alt + S</span></td>\
+				<td>Activar o desactivar efectos de sonido</td>\
+			</tr>\
+			<tr>\
+				<td><span>Escape</span></td>\
+				<td>Salir de cuadro de diálogo</td>\
+			</tr>\
+		</tbody>\
+	</table>\
+	');
+	hotkeysDialog.open();
+}
+
+// Añadir funcionalidades adicionales de la historia
 $(document).on(':passagedisplay', function(event) {
-  const $soundToggle = $('#passages button.link-internal.macro-button');
+  // Re-ubicar botón de audio
+  const $soundToggle = $('#passages button.link-internal.macro-button:first-child');
   if (!$('#sound-toggle')[0]) {
-    $soundToggle.attr('id', 'sound-toggle');
+    // Indicar funcionalidad para lector de pantalla
+    $soundToggle.attr({
+      'id': 'sound-toggle',
+      'aria-label': 'habilitar sonido',
+      'aria-pressed': 'true'
+    });
     $uiBarBody.append($soundToggle);
     $soundToggle.on('click', function() {
       $(this).text(State.variables.audio ? '🔊' : '🔇');
     });
   } else {
     $soundToggle.remove();
+  }
+  
+  // Ejecutar tras la carga inicial de todos los elementos
+  if (!contentAdded) {
+    // Etiquetar boton de ocultar barra lateral
+    $('#ui-bar-toggle')
+    	.removeAttr('title')
+    	.attr({
+      		'aria-label': 'ocultar barra lateral',
+      		'aria-pressed': 'false'
+    	});
+    
+    // Etiquetar botones de navegación de pasajes en barra lateral
+    $('#history-backward, #history-forward').removeAttr('title');
+    $('#history-backward').attr('aria-label', 'ir a escena anterior');
+    $('#history-forward').attr('aria-label', 'ir a siguiente escena visitada');
+    
+    // Traducir botones de #menu
+    $('#menu-item-continue a').text('CONTINUAR');
+	$('#menu-item-saves').remove();
+    $('#menu-item-restart a').text('REINICIAR');
+    
+    // Añadir botón de Atajos
+    const $hotkeys = $('\
+		<li id="menu-item-hotkeys">\
+			<a tabindex="0" role="button">\
+				ATAJOS\
+			</a>\
+		</li>\
+	');
+    $('#menu-core').append($hotkeys);
+    const $hotkeysButton = $('#menu-item-hotkeys a');
+    $hotkeysButton.on('click', createHotkeysDialog);
+    $('#menu-item-hotkeys').on('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') $hotkeysButton.trigger('click');
+    });
+    
+    // Indicar que no se debe volver a añadir todo lo anterior
+    contentAdded = true;
   }
 });
 
@@ -957,21 +1062,27 @@ $(document).on('keydown', function(event) {
   const ctrlKey = event.ctrlKey;
   const altKey = event.altKey;
   
+  // Barra lateral (ampliar/minimizar)
+  if (altKey && key === 'b') if (UIBar.isStowed()) UIBar.unstow(); else UIBar.stow();
+  
   // Retroceder y Avanzar entre pasajes visitados (barra lateral)
   if (ctrlKey && key === 'ArrowLeft') $('#history-backward').trigger('click');
   if (ctrlKey && key === 'ArrowRight') $('#history-forward').trigger('click');
   
-  // Guardar
-  if (altKey && key === 'g') $('#menu-item-saves a').trigger('click');
+  // Continuar
+  if (altKey && key === 'c') $('#menu-item-continue a').trigger('click');
   
   // Reiniciar
   if (altKey && key === 'r') $('#menu-item-restart a').trigger('click');
   
-  // Activar/desactivar sonido
+  // Atajos
+  if (altKey && key === 'a') $('#menu-item-hotkeys a').trigger('click');
+  
+  // Sonido (activar/desactivar)
   if (altKey && key === 's') $('#sound-toggle').trigger('click');
   
   // Cerrar cuadro de diálogo abierto
-  if (key === 'Escape' && $('#ui-dialog').attr('class') === 'open') $('#ui-dialog-close').trigger('click');
+  if (key === 'Escape' && Dialog.isOpen()) $('#ui-dialog-close').trigger('click');
 });
 
 
@@ -985,7 +1096,12 @@ document.documentElement.lang = "es";
 $('#story').insertBefore('#ui-bar');
 
 // Establecer barra lateral como landmark complementario
-$uiBar.attr('role', 'complementary');
+$uiBar.attr({
+  'role': 'complementary',
+  'aria-label': 'barra lateral'
+});
+
+
 
 :: StoryStylesheet [stylesheet]
 * {
@@ -1037,6 +1153,24 @@ nav[aria-label="Opciones de historia"] ul {
 
 #story:has(+ #ui-bar.stowed) {
     margin-left: 4.5em;
+}
+
+/* Tabla Atajos */
+caption {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+th, td {
+  padding: 10px;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 tw-story {
