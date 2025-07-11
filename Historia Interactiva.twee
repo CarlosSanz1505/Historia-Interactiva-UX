@@ -37,6 +37,7 @@ Historia Interactiva
 
 
 :: Atento a la charla {"position":"725,325","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/mejor_pongo_atencion.webp" alt="Poniendo atencion a la charla"></div>\
 <p>Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.</p>\
 \
 <p>Pero entonces menciona algo que no entiendes del todo. Te surgen preguntas: <i>¿Qué quiso decir con eso? ¿Podría aplicarlo a lo que me interesa?</i></p>\
@@ -52,7 +53,7 @@ Historia Interactiva
 
 
 :: Buscando duda en internet {"position":"875,475","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/buscando_duda_internet.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/buscando_duda_internet.webp" alt="Buscando duda en internet"></div>\
 \
 <p>No te atreves a preguntar. Bajas la mirada y finges tomar notas, pero tu mente sigue dando vueltas a la duda. Sacas el celular y buscas información en internet.</p>\
 \
@@ -79,12 +80,13 @@ Historia Interactiva
     	<li>[[Continuar|Cena familiar]]</li>
 	</ul>
 </nav>
+<<set $nivelAnsiedad+=10>>
 
 
 :: Cena familiar {"position":"1325,400","size":"100,100"}
 <h2>ESCENARIO 2: Cena con tus padres</h2>\
 \
-<img src="imagenes/cena_con_padres.webp">\
+<img src="imagenes/cena_con_padres.webp" alt="Cena con padres">\
 \
 <p>Despiertas del sueño y tu mamá te llama para cenar. Bajas al comedor, donde todo parece tranquilo mientras tus padres conversan. Comentas sobre la charla del colegio, pero la calma se rompe cuando tu papá pregunta: "¿Y tú? ¿Ya has pensado qué quieres estudiar?". El ruido de fondo desaparece, tu corazón se acelera, y las palabras se atascan. Sus rostros expectantes te llenan de presión, y no sabes cómo responder.</p>\
 \
@@ -104,7 +106,7 @@ Historia Interactiva
 
 
 :: Comiendo con amigos {"position":"650,700","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/comiendo_con_amigos.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/comiendo_con_amigos.webp" alt="Comiendo papas con amigos"></div>\
 \
 <p>Decides no entrar y buscas a tus amigos en el patio y caminan hacia la tienda. Se ríen de tonterías y piden algunas papas fritas y gaseosas.</p>\
 \
@@ -133,6 +135,8 @@ Historia Interactiva
 
 
 :: Contar o no {"position":"2850,175","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/contar_o_no_la_verdad.webp" alt="Viendo desde la sala a tus padres felices y tu pensativo"></div>\
+\
 <p>Miro a mis padres desde la sala, preguntándome si debería decirles. ¿Cómo reaccionarán? ¿Volverán a sermonearme?</p>\
 \
 <p>El nudo en mi garganta crece. Quiero hablar, pero el recuerdo de nuestras últimas charlas me detiene. </p>\
@@ -146,6 +150,8 @@ Historia Interactiva
 
 
 :: Decir la verdad {"position":"2975,25","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/padres_compasivos.webp" alt="Sentados en la sala hablando"></div>\
+\
 <p>Les digo la verdad. Mis padres se entristecen, pero no me reprochan. Solo me piden que vaya a mi cuarto mientras ellos piensan qué hacer.</p>\
 \
 <p>Horas después, me llaman. “Hemos decidido inscribirte en un preuniversitario. Será una nueva oportunidad para prepararte”, dicen con una mezcla de firmeza y cariño.</p>\
@@ -227,8 +233,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Distraído {"position":"725,100","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/se_distrae_en_el_celular.webp"></div>\
-\
+<div class="contenedor-imagen"><img src="imagenes/se_distrae_en_el celular.webp" alt="Viendo memes en el celular"></div>\
 <p>Sacas el celular de tu bolsillo y lo enciendes. Miras mensajes, memes, cualquier cosa que te aleje de lo que está pasando aquí. Te sientes menos ansioso, pero solo por un momento.</p>\
 \
 <p>De pronto, una voz en tu cabeza susurra: <i>Deberías estar prestando atención. Viniste para esto, ¿no?</i> Intentas ignorarla y sigues deslizando. Pero la culpa crece. <i>¿Y si me estoy perdiendo algo importante?</i></p>\
@@ -255,7 +260,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: En el baño {"position":"1475,475","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/en_el_bano.webp></div>\
+<div class="contenedor-imagen"><img src="imagenes/en_el_bano.webp" alt="En el bano con ataque de ansiedad"></div>\
 \
 <p>La pregunta te supera, así que te excusas y te encierras en el baño. Escuchas a tus padres murmurar preocupados, lo que aumenta tu angustia.</p>\
 \
@@ -268,7 +273,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 :: Escenario 1 {"position":"425,400","size":"100,100"}
 <h2>ESCENARIO 1: Charla sobre proyecto de Vida</h2>\
-<div class="contenedor-imagen"><img src="imagenes/ir_a_charla.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/ir_a_charla.webp"  alt="Pensando si ir a charla"></div>\
 <p>Estás en el patio del colegio cuando de repente escuchas a la profesora Marcela decir: "¡Recuerden, estudiantes! La charla sobre la universidad comienza en cinco minutos. Es importante que asistan si están pensando en su futuro."</p>\
 <p>La palabra "Futuro" te golpea como un eco pesado. <b>Futuro</b>. Solo pensar en ello hace que tu estómago se encoja. <i>¿Qué se supone que debo hacer?</i> Tus pensamientos hacen un torbellino: <i>¿Y si voy y dicen cosas que no entiendo? ¿Y si me hacen preguntas? ¿Qué pasa si no tengo ni idea de qué quiero hacer?</i></p>\
 <p><i>Decide rápido si debes ir o no a la charla</i>, te dices a ti mismo. Pero tu cuerpo no responde.</p>\
@@ -282,6 +287,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Estudio {"position":"1775,25","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/estudiando.webp" alt="Estudiando con pila de tareas al lado"></div>\
+\
 <p>Miras la pila de tareas pendientes. Suspiras, sabiendo que, si no empiezas ahora, mañana será peor, y comienzas a hacerlas. Al principio, te sientes abrumado. <i>¿Cómo dejé que se acumulara tanto?</i> Pero poco a poco, vas avanzando. La sensación de estar logrando algo empieza a reemplazar el estrés.</p>\
 \
 <p>Horas después, te sientes cansado, pero también un poco más tranquilo. <i>Al menos hice algo hoy</i>. Cierras los ojos, y esta vez, el sueño llega más rápido.</p>\
@@ -305,10 +312,11 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
 </nav>\
+<<set $nivelAnsiedad+=10>>
 
 
 :: Hablando en público {"position":"875,325","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/hablando_en_publico.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/hablando_en_publico.webp" alt="Hablando en publico"></div>\
 \
 <p>Te levantas sintiendo todas las miradas sobre ti. Aunque tenías la pregunta clara en tu mente, los nervios te traicionan y tus palabras se desordenan, provocando risas que aumentan tu incomodidad.</p>\
 \
@@ -322,6 +330,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Honestidad (negativo) {"position":"1475,625","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/no_responder.webp" alt="Tension y disgusto de padres"></div>\
+\
 <p>Bajas la mirada y les dices la verdad: "No sé, ni siquiera fui a la charla del colegio… no sé qué responder."</p>\
 \
 <p>La reacción es inmediata. Tu papá se cruza de brazos, y tu mamá se muestra decepcionada. Te hablan sobre la importancia de tomar estas cosas en serio. Te sientes atacado, y antes de que la discusión se agrande, te levantas y te vas al cuarto, cerrando la puerta con fuerza.</p>\
@@ -334,7 +344,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Honestidad (positivo) {"position":"1475,325","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/si_responder,webp></div>\
+<div class="contenedor-imagen"><img src="imagenes/si_responder.webp" alt="Padres contentos"></div>\
 \
 <p>Respiras profundo y admites que no tienes claro qué estudiar, pero compartes lo que aprendiste en la charla: no es necesario decidirlo todo de inmediato. Tu mamá sonríe y dice que es un buen comienzo. La cena continúa tranquila, y te sientes más aliviado.</p>\
 \
@@ -358,6 +368,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Invitación a salir {"position":"2100,400","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/invitacion_salir.webp" alt="Viendo el celular con la invitacion a salir e imaginando que sale mal"></div>\
+\
 <p>Al despertar veo el celular, es temprano, pero ya hay un mensaje en el grupo de amigos: “Vamos a comer algo más tarde. ¿Quién se apunta?”</p>\
 \
 <p>Me quedo mirando el mensaje por un rato. <i>¿Debería ir?</i> La idea de salir parece tentadora; tal vez podría distraerme un poco, dejar de pensar tanto. Pero entonces las dudas aparecen: <i>¿Y si no sé de qué hablar? ¿Y si parezco aburrido? ¿Realmente quiero salir o solo estoy buscando escapar de algo más?</i></p>\
@@ -367,8 +379,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 <nav aria-label="Opciones de historia">\
 	<ul>\
     	<<if $honestidad is true>>\
-        	<li>[[No me siento animado, pero vamos|Acepto(Honestidad)]]</li>\
-        	<li>[[No tengo ánimos, quedémonos en casa |Rechazo(Honestidad)]]</li>\
+        	<li>[[No me siento animado, pero vamos|Acepto(Honestidad)][$nivelAnsiedad += 10]]</li>\
+        	<li>[[No tengo ánimos, quedémonos en casa |Rechazo(Honestidad)][$nivelAnsiedad += 10]]</li>\
 		<<else>>\
         	<li>[[Voy a ir, quiero divertirme con mis amigos|Acepto]]</li>\
         	<li>[[Que pereza, mejor me quedo en casa |Rechazo]]</li>\
@@ -378,7 +390,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Invitación a salir (rechazada) {"position":"2100,100","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/invitacion_salir.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/invitacion_salir.webp" alt="Viendo el celular con la invitacion a salir e imaginando que sale mal"></div>\
 \
 <p>Mientras intentas dormirte, el celular vibra. ¿Quién será a esta hora? Lo agarras y desbloqueas la pantalla. Es un mensaje de tus amigos: "¿Vamos a comer algo? Nos vemos en 20 minutos."</p>\
 \
@@ -414,7 +426,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <nav aria-label="Opciones de historia">\
 	<ul>\
-    	<li>[[Continuar|No compraste el PIN]]</li>\
+    	<li>[[Continuar|Sentirse mal en el cuarto]]</li>\
 	</ul>\
 </nav>
 
@@ -433,6 +445,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Llegada donde los amigos {"position":"2675,325","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/salida_amigos.webp" alt="Con amigos riendo"></div>\
+\
 <p>Decido ir y pido un carro. Cuando finalmente llego, ya todos están sentados y riendo. Me disculpo rápido: “Perdón por la tardanza, el tráfico estaba terrible.”</p>\
 \
 <p>Ellos me dicen que no pasa nada, pero sigo sintiéndome fuera de lugar. Me tomo un momento para tratar de relajarme y unirme a la conversación.</p>\
@@ -488,6 +502,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Mesero {"position":"2925,825","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/mesero.webp"></div>\
+\
 <p>Decido salir. Camino sin rumbo hasta que un letrero llama mi atención: “Se necesita mesero”. Me detengo frente a la puerta, dudando. <i>¿Y si no soy bueno para esto? ¿Debería intentarlo?</i></p>\
 \
 <p>Finalmente, entro y pregunto por el trabajo. Para mi sorpresa, me lo dan. Los primeros días son difíciles, pero poco a poco comienzo a sentirme útil, a entender que no necesito tener todo claro ahora mismo.</p>\
@@ -528,6 +544,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: No pase {"position":"2925,700","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/no_pase.webp"></div>\
+\
 <p>Pasan los días y llega el resultado: No pasaste. Mi corazón se hunde, y las dudas vuelven a invadirme.</p>\
 \
 <p>Reúno valor y se lo cuento a mis padres. Para mi sorpresa, me apoyan. “No te preocupes, hay más oportunidades”, dice mi mamá con una sonrisa.</p>\
@@ -542,7 +560,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: No responder {"position":"1475,25","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/no_responder.webp></div>\
+<div class="contenedor-imagen"><img src="imagenes/no_responder.webp" alt="Tension y disgusto de padres"></div>\
 \
 <p>No respondes, pero eso solo hace que insistan. "Toño, este es un tema serio. ¿Qué te gustaría estudiar?", pregunta tu papá con más firmeza.</p>\
 \
@@ -556,7 +574,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: No vine aquí para esto {"position":"875,175","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/mejor_pongo_atencion.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/mejor_pongo_atencion.webp" alt="Poniendo atencion a la charla"></div>\
 \
 <p>Dejas el celular sobre tu regazo. Suspiras, sintiendo la culpa como un peso en el pecho. <i>No vine aquí para esto</i>.</p>\
 \
@@ -598,6 +616,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Pase a la universidad {"position":"3050,450","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/pase_a_la_universidad.webp"></div>\
+\
 <p>Pasan días, y finalmente, los resultados están disponibles. Con el corazón latiendo fuerte, reviso la página.</p>\
 \
 <p>¡Pasé!</p>\
@@ -623,6 +643,11 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     <<script>>Save.browser.slot.save(0);<</script>>\
 <</if>>
 
+<div class="theme-switch">
+  <input type="checkbox" id="theme-toggle" />
+  <label for="theme-toggle"></label>
+</div>
+
 
 :: Pedir comida {"position":"2800,575","size":"100,100"}
 <p>Cuando llega el momento de pedir comida, elijo lo primero que veo en el menú sin pensarlo. Estoy desconectado hasta que un amigo me pregunta: “¿Estás bien?”</p>\
@@ -637,6 +662,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Pesadilla {"position":"1775,475","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/pesadilla.webp" alt="Representacion pesadilla"></div>\
+\
 <p>Te quedas dormido y sueñas que estás caminando por un pasillo. Hay puertas cerradas cada una con un letrero: "Medicina", "Ingeniería", "Arte". Tratas de abrir una, pero están bloqueadas, y la sensación de urgencia crece, una gran puerta con la palabra “Futuro” aparece frente a ti. La abres, y detrás solo hay un abismo oscuro. Sientes que caes, y el vacío se apodera de ti.</p>\
 \
 <p>Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. <i>Por lo menos ya amaneció…</i></p>\
@@ -646,6 +673,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	<li>[[Continuar|Invitación a salir]]</li>\
 	</ul>\
 </nav>\
+<<set $nivelAnsiedad+=10>>
 
 
 :: Preguntar a un amigo {"position":"875,625","size":"100,100"}
@@ -660,11 +688,10 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	<li>[[Continuar|Cena familiar]]</li>
 	</ul>
 </nav>
+<<set $nivelAnsiedad+=10>>
 
 
 :: Rechazo {"position":"2375,450","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/viendo_soul.webp"></div>\
-\
 <p>Escribo: <i>“No puedo hoy, tal vez en otra ocasión”</i>.</p>\
 \
 <p>No quiero ver las respuestas ni pensar en cómo reaccionarán mis amigos, así que dejo el celular a un lado.</p>\
@@ -705,6 +732,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Responder con inseguridad {"position":"1475,175","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/no_responder.webp" alt="Tension y disgusto de padres"></div>\
+\
 <p>Balbuceas algo incoherente, mencionando opciones vagas. Tus padres te piden que tomes el tema en serio, y te sientes pequeño y frustrado por no tener una respuesta clara.</p>\
 \
 <nav aria-label="Opciones de historia">\
@@ -715,6 +744,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 
 
 :: Respuesta inventada {"position":"1475,775","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/si_responder.webp" alt="Padres felices"></div>\
+\
 <p>"Medicina", dices sin pensar mucho, solo para salir del paso. La expresión de tus padres cambia al instante. Ambos parecen aliviados. "Eso es una gran decisión, Toño", dice tu mamá, sonriendo.</p>\
 \
 <p>Sientes alivio al ver sus reacciones, pero también algo de incomodidad. Piensas: <i>¿Siquiera me gusta la medicina? ¡¡¡Porque creo que le tengo miedo a la sangre… ¡¡¡Oh no, qué he hecho!!!</i></p>\
@@ -735,8 +766,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <nav aria-label="Opciones de historia">\
 	<ul>\
-    	<li>[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos]]</li>\
-        <li>[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Sentirse mal en el cuarto]]</li>\
+    	<li>[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos][$nivelAnsiedad += 10]]</li>\
+        <li>[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Videojuegos]]</li>\
 	</ul>\
 </nav>
 
@@ -776,6 +807,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	<li>[[Continuar|Cena familiar]]</li>
 	</ul>
 </nav>
+<<set $nivelAnsiedad+=10>>
 
 
 :: Seguir viendo charla {"position":"1175,250","size":"100,100"}
@@ -790,10 +822,11 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	<li>[[Continuar|Cena familiar]]</li>\
 	</ul>\
 </nav>\
+<<set $nivelAnsiedad+=10>>
 
 
 :: Sentirse mal {"position":"1625,700","size":"100,100"}
-<div class="contenedor-imagen"><img src="imagenes/sentirse_mal.webp"></div>\
+<div class="contenedor-imagen"><img src="imagenes/sentirse_mal.webp" alt="Acostado en cama mirando al techo"></div>\
 \
 <p>Llegas a tu cuarto sintiéndote peor que nunca, mientras piensas: <i>¿Por qué soy así? ¿Por qué no puedo hacer lo correcto?</i></p>\
 <p>Piensas en tus padres: <i>¿Qué estarán diciendo de mí ahora? ¿Qué pasa si siempre los decepciono?</i> Tu futuro parece más confuso que nunca. <i>¿Cómo voy a encontrar algo que me guste? ¿Y si nunca lo hago?</i></p>\
@@ -801,9 +834,10 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 <nav aria-label="Opciones de historia">\
 	<ul>\
-    	<li>[[Continuar|Invitación a salir]]</li>\
+    	<li>[[Continuar|Invitación a salir][$honestidad to true]]</li>\
 	</ul>\
 </nav>\
+<<set $nivelAnsiedad+=10>>
 
 
 :: Sentirse mal en el cuarto {"position":"2700,25","size":"100,100"}
@@ -873,6 +907,8 @@ Sub~~script~~
 
 
 :: Videojuegos {"position":"2400,175","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/videojuegos.webp" alt="En la sala jugando videojuegos y padres disgustados"></div>\
+\
 <p>Decido no revisar el celular y voy a la sala. Enciendo la consola para distraerme con un videojuego, pero no llevo mucho tiempo jugando cuando mis padres me ven.</p>\
 \
 <p>“¿Otra vez jugando? ¿Y el estudio?” pregunta mi papá con el ceño fruncido. Bajo el control, sintiendo cómo el peso de su desaprobación se suma al nudo en mi pecho. ¿Por qué nunca puedo hacer las cosas bien?</p>\
@@ -885,6 +921,8 @@ Sub~~script~~
 
 
 :: Viendo Soul {"position":"2675,450","size":"100,100"}
+<div class="contenedor-imagen"><img src="imagenes/viendo_soul.webp" alt="En la sala viendo soul"></div>\
+\
 <p>Después de mucho buscar, encuentro "Soul" en una plataforma. La veo con curiosidad, pero pronto me cautiva. Sus mensajes sobre el propósito de la vida y la importancia de disfrutar el presente me tocan profundamente.</p>\
 \
 <p>Para cuando termina, tengo lágrimas en los ojos. Tal vez no necesito tenerlo todo resuelto ahora mismo. Por primera vez en mucho tiempo, siento algo diferente: alivio.</p>\
@@ -982,6 +1020,10 @@ function createHotkeysDialog() {
 				<td>Activar o desactivar efectos de sonido</td>\
 			</tr>\
 			<tr>\
+				<td><span>Alt + T</span></td>\
+				<td>Activar o desactivar tema claro/oscuro</td>\
+			</tr>\
+			<tr>\
 				<td><span>Escape</span></td>\
 				<td>Salir de cuadro de diálogo</td>\
 			</tr>\
@@ -1050,6 +1092,69 @@ $(document).on(':passagedisplay', function(event) {
   }
 });
 
+/* ===============================
+   SWITCH DE TEMA CLARO/OSCURO ACCESIBLE
+   =============================== */
+$(document).on(':passagedisplay', function () {
+  const $themeSwitch = $('#passages .theme-switch');
+
+  // Mover el switch al menú lateral si no está ya
+  if ($themeSwitch.length && !$('#theme-switch')[0]) {
+    $themeSwitch.attr('id', 'theme-switch');
+    $('#ui-bar-body').append($themeSwitch);
+
+    const $toggle = $('#theme-toggle');
+
+    // Atributos ARIA para lectores de pantalla
+    $toggle.attr({
+      'aria-label': 'Alternar tema claro u oscuro',
+      'role': 'switch',
+      'aria-checked': document.documentElement.getAttribute('data-theme') === 'dark'
+    });
+
+    // Evento cambio de tema
+    $toggle.off('change').on('change', function () {
+      toggleTheme();
+    });
+  } else {
+    // Eliminar duplicados en la historia
+    $themeSwitch.remove();
+  }
+
+  // Sincronizar estado del switch con el tema guardado
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  const toggle = document.getElementById('theme-toggle');
+  const label = document.querySelector('label[for="theme-toggle"]');
+
+  if (toggle && label) {
+    toggle.checked = (savedTheme === 'dark');
+    label.classList.toggle('active', toggle.checked);
+
+    // Actualizar atributo aria-checked
+    toggle.setAttribute('aria-checked', toggle.checked);
+  }
+});
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+
+  const toggle = document.getElementById('theme-toggle');
+  const label = document.querySelector('label[for="theme-toggle"]');
+
+  if (toggle && label) {
+    toggle.checked = (newTheme === 'dark');
+    label.classList.toggle('active', toggle.checked);
+
+    // Actualizar aria-checked dinámicamente
+    toggle.setAttribute('aria-checked', toggle.checked);
+  }
+}
+
 
 
 /* ACCESIBILIDAD */
@@ -1081,6 +1186,9 @@ $(document).on('keydown', function(event) {
   // Sonido (activar/desactivar)
   if (altKey && key === 's') $('#sound-toggle').trigger('click');
   
+  //Activar tema claro-oscuro
+  if (altKey && key === 't') $('#theme-toggle').trigger('click');
+  
   // Cerrar cuadro de diálogo abierto
   if (key === 'Escape' && Dialog.isOpen()) $('#ui-dialog-close').trigger('click');
 });
@@ -1101,38 +1209,57 @@ $uiBar.attr({
   'aria-label': 'barra lateral'
 });
 
-
-
 :: StoryStylesheet [stylesheet]
 * {
-  font-family: Verdana;
+  font-family: 'Verdana', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2 {
+  color: var(--accent-color);
 }
 
 h1 {
-  font-size: 2.25em;
-}
-
-.warning {
-  border: 5px dashed red;
-  border-radius: 2rem;
-  padding: 30px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.8em;
-  margin-top: 10px;
-  padding-left: 30px;
+  margin-bottom: 0.5em;
 }
 
 code {
-  font-family: Courier;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .key {
-  background-color: rgb(35, 35, 35);
-  padding: 2px;
+  background-color: var(--accent-light);
+  padding: 2px 6px;
   border-radius: 5px;
+  color: var(--text-color);
 }
+
+.warning {
+  border: 2px solid var(--accent-color);
+  padding: 1.5rem;
+  background: #808080;
+  color: var(--text-color);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 nav[aria-label="Opciones de historia"] {
   margin-top: 3rem;
@@ -1155,36 +1282,173 @@ nav[aria-label="Opciones de historia"] ul {
     margin-left: 4.5em;
 }
 
+
+* ====== VARIABLES POR TEMA ====== */
+html[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --link-color: #0066CC;
+  --accent-color: #0076A8;
+  --accent-light: #e0f1fb;
+  --passage-background: #f9f9f9;
+
+}
+
+html[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+  --link-color: #8ab4f8;
+  --accent-color: #8ab4f8;
+  --accent-light: #243447;
+  --passage-background: #1e1e1e;
+}
+
 /* Tabla Atajos */
-caption {
-  margin-bottom: 20px;
+/* ===============================
+   Estilo bonito para tabla de Atajos
+   =============================== */
+#ui-dialog-body {
+  background-color: #ffffff !important; /* Fondo sólido blanco */
+  color: #1a1a1a !important;           /* Texto oscuro */
+  border-radius: 10px;                 /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 1.5rem;
+  font-family: 'Verdana', sans-serif;
+}
+
+#ui-dialog-body table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para tabla */
+}
+
+#ui-dialog-body caption {
+  margin-bottom: 1rem;
   font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0076A8; /* Azul accesible */
 }
 
-table, th, td {
-  border: 1px solid;
+#ui-dialog-body th {
+  background-color: #0076A8; /* Encabezado azul */
+  color: #ffffff;           /* Texto blanco */
+  text-align: left;
+  padding: 12px 15px;
 }
 
-th, td {
-  padding: 10px;
+#ui-dialog-body td {
+  padding: 10px 15px;
+  border-top: 1px solid #dddddd;
 }
 
-tbody > tr:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.1);
+#ui-dialog-body tbody tr:nth-child(odd) {
+  background-color: #f7f9fa; /* Gris clarito */
 }
 
-tw-story {
-  background-color: white;
-  color: black;
+#ui-dialog-body tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Blanco */
+}
+
+#ui-dialog-body tbody tr:hover {
+  background-color: #e1f0fa; /* Azul muy suave al pasar el mouse */
+  transition: background-color 0.3s ease;
+}
+
+#ui-dialog-body td span {
+  display: inline-block;
+  background-color: #eaf3fa; /* Azul pálido */
+  color: #1a1a1a;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+body, tw-story {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 tw-passage {
-  padding-bottom: 300px;
+  background-color: var(--passage-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: background-color 0.4s ease;
 }
 
 tw-link {
-  color: #0076A8;
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
+
+
+/* ====== SWITCH DE TEMA ====== */
+.theme-switch {
+  position: relative; 
+  margin-top: 1rem; 
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.theme-switch input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.theme-switch label {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.theme-switch label::after {
+  content: '🌞';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: left 0.3s ease, content 0.3s ease, background 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.theme-switch label.active {
+  background: var(--accent-color);
+}
+
+.theme-switch label.active::after {
+  left: calc(100% - 27px);
+  content: "🌙";
+}
+
 
 /* NIVEL DE ANSIEDAD */
 tw-sidebar {

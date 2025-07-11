@@ -105,34 +105,55 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<tw-storydata name="Historia Interactiva" startnode="34" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="744B88F8-A88D-450D-88BC-CDF5C9C8211D" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">* {
-  font-family: Verdana;
+  font-family: 'Verdana', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2 {
+  color: var(--accent-color);
 }
 
 h1 {
-  font-size: 2.25em;
-}
-
-.warning {
-  border: 5px dashed red;
-  border-radius: 2rem;
-  padding: 30px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.8em;
-  margin-top: 10px;
-  padding-left: 30px;
+  margin-bottom: 0.5em;
 }
 
 code {
-  font-family: Courier;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .key {
-  background-color: rgb(35, 35, 35);
-  padding: 2px;
+  background-color: var(--accent-light);
+  padding: 2px 6px;
   border-radius: 5px;
+  color: var(--text-color);
 }
+
+.warning {
+  border: 2px solid var(--accent-color);
+  padding: 1.5rem;
+  background: #808080;
+  color: var(--text-color);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 nav[aria-label="Opciones de historia"] {
   margin-top: 3rem;
@@ -155,36 +176,173 @@ nav[aria-label="Opciones de historia"] ul {
     margin-left: 4.5em;
 }
 
+
+* ====== VARIABLES POR TEMA ====== */
+html[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --link-color: #0066CC;
+  --accent-color: #0076A8;
+  --accent-light: #e0f1fb;
+  --passage-background: #f9f9f9;
+
+}
+
+html[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+  --link-color: #8ab4f8;
+  --accent-color: #8ab4f8;
+  --accent-light: #243447;
+  --passage-background: #1e1e1e;
+}
+
 /* Tabla Atajos */
-caption {
-  margin-bottom: 20px;
+/* ===============================
+   Estilo bonito para tabla de Atajos
+   =============================== */
+#ui-dialog-body {
+  background-color: #ffffff !important; /* Fondo sólido blanco */
+  color: #1a1a1a !important;           /* Texto oscuro */
+  border-radius: 10px;                 /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 1.5rem;
+  font-family: 'Verdana', sans-serif;
+}
+
+#ui-dialog-body table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para tabla */
+}
+
+#ui-dialog-body caption {
+  margin-bottom: 1rem;
   font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0076A8; /* Azul accesible */
 }
 
-table, th, td {
-  border: 1px solid;
+#ui-dialog-body th {
+  background-color: #0076A8; /* Encabezado azul */
+  color: #ffffff;           /* Texto blanco */
+  text-align: left;
+  padding: 12px 15px;
 }
 
-th, td {
-  padding: 10px;
+#ui-dialog-body td {
+  padding: 10px 15px;
+  border-top: 1px solid #dddddd;
 }
 
-tbody > tr:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.1);
+#ui-dialog-body tbody tr:nth-child(odd) {
+  background-color: #f7f9fa; /* Gris clarito */
 }
 
-tw-story {
-  background-color: white;
-  color: black;
+#ui-dialog-body tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Blanco */
+}
+
+#ui-dialog-body tbody tr:hover {
+  background-color: #e1f0fa; /* Azul muy suave al pasar el mouse */
+  transition: background-color 0.3s ease;
+}
+
+#ui-dialog-body td span {
+  display: inline-block;
+  background-color: #eaf3fa; /* Azul pálido */
+  color: #1a1a1a;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+body, tw-story {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 tw-passage {
-  padding-bottom: 300px;
+  background-color: var(--passage-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: background-color 0.4s ease;
 }
 
 tw-link {
-  color: #0076A8;
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
+
+
+/* ====== SWITCH DE TEMA ====== */
+.theme-switch {
+  position: relative; 
+  margin-top: 1rem; 
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.theme-switch input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.theme-switch label {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.theme-switch label::after {
+  content: '🌞';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: left 0.3s ease, content 0.3s ease, background 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.theme-switch label.active {
+  background: var(--accent-color);
+}
+
+.theme-switch label.active::after {
+  left: calc(100% - 27px);
+  content: "🌙";
+}
+
 
 /* NIVEL DE ANSIEDAD */
 tw-sidebar {
@@ -307,6 +465,10 @@ function createHotkeysDialog() {
 				<td>Activar o desactivar efectos de sonido</td>\
 			</tr>\
 			<tr>\
+				<td><span>Alt + T</span></td>\
+				<td>Activar o desactivar tema claro/oscuro</td>\
+			</tr>\
+			<tr>\
 				<td><span>Escape</span></td>\
 				<td>Salir de cuadro de diálogo</td>\
 			</tr>\
@@ -375,6 +537,69 @@ $(document).on(':passagedisplay', function(event) {
   }
 });
 
+/* ===============================
+   SWITCH DE TEMA CLARO/OSCURO ACCESIBLE
+   =============================== */
+$(document).on(':passagedisplay', function () {
+  const $themeSwitch = $('#passages .theme-switch');
+
+  // Mover el switch al menú lateral si no está ya
+  if ($themeSwitch.length && !$('#theme-switch')[0]) {
+    $themeSwitch.attr('id', 'theme-switch');
+    $('#ui-bar-body').append($themeSwitch);
+
+    const $toggle = $('#theme-toggle');
+
+    // Atributos ARIA para lectores de pantalla
+    $toggle.attr({
+      'aria-label': 'Alternar tema claro u oscuro',
+      'role': 'switch',
+      'aria-checked': document.documentElement.getAttribute('data-theme') === 'dark'
+    });
+
+    // Evento cambio de tema
+    $toggle.off('change').on('change', function () {
+      toggleTheme();
+    });
+  } else {
+    // Eliminar duplicados en la historia
+    $themeSwitch.remove();
+  }
+
+  // Sincronizar estado del switch con el tema guardado
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  const toggle = document.getElementById('theme-toggle');
+  const label = document.querySelector('label[for="theme-toggle"]');
+
+  if (toggle && label) {
+    toggle.checked = (savedTheme === 'dark');
+    label.classList.toggle('active', toggle.checked);
+
+    // Actualizar atributo aria-checked
+    toggle.setAttribute('aria-checked', toggle.checked);
+  }
+});
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+
+  const toggle = document.getElementById('theme-toggle');
+  const label = document.querySelector('label[for="theme-toggle"]');
+
+  if (toggle && label) {
+    toggle.checked = (newTheme === 'dark');
+    label.classList.toggle('active', toggle.checked);
+
+    // Actualizar aria-checked dinámicamente
+    toggle.setAttribute('aria-checked', toggle.checked);
+  }
+}
+
 
 
 /* ACCESIBILIDAD */
@@ -406,6 +631,9 @@ $(document).on('keydown', function(event) {
   // Sonido (activar/desactivar)
   if (altKey && key === 's') $('#sound-toggle').trigger('click');
   
+  //Activar tema claro-oscuro
+  if (altKey && key === 't') $('#theme-toggle').trigger('click');
+  
   // Cerrar cuadro de diálogo abierto
   if (key === 'Escape' && Dialog.isOpen()) $('#ui-dialog-close').trigger('click');
 });
@@ -424,9 +652,7 @@ $('#story').insertBefore('#ui-bar');
 $uiBar.attr({
   'role': 'complementary',
   'aria-label': 'barra lateral'
-});
-
-</script><tw-passagedata pid="1" name="Acepto" tags="" position="2375,325" size="100,100">&lt;p&gt;Respondo con un simple “¡Voy!” al mensaje. Ahora bien &lt;i&gt; ¿Qué me pongo?&lt;/i&gt;&lt;/p&gt;\
+});</script><tw-passagedata pid="1" name="Acepto" tags="" position="2375,325" size="100,100">&lt;p&gt;Respondo con un simple “¡Voy!” al mensaje. Ahora bien &lt;i&gt; ¿Qué me pongo?&lt;/i&gt;&lt;/p&gt;\
 \
 &lt;p&gt;Abro el armario y me quedo mirando la ropa por un rato. &lt;i&gt;¿Dará buena impresión esto? ¿Será demasiado simple aquello? Finalmente, escojo algo que me hace sentir cómodo.&lt;/i&gt;&lt;/p&gt;\
 \
@@ -442,7 +668,8 @@ $uiBar.attr({
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar |Llegar donde amigos(Honestidad)]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="3" name="Atento a la charla" tags="" position="725,325" size="100,100">&lt;p&gt;Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="3" name="Atento a la charla" tags="" position="725,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/mejor_pongo_atencion.webp&quot; alt=&quot;Poniendo atencion a la charla&quot;&gt;&lt;/div&gt;\
+&lt;p&gt;Decides concentrarte. Las palabras del expositor empiezan a tener sentido y tomas nota mental de algunas cosas importantes.&lt;/p&gt;\
 \
 &lt;p&gt;Pero entonces menciona algo que no entiendes del todo. Te surgen preguntas: &lt;i&gt;¿Qué quiso decir con eso? ¿Podría aplicarlo a lo que me interesa?&lt;/i&gt;&lt;/p&gt;\
 \
@@ -453,7 +680,7 @@ $uiBar.attr({
     	&lt;li&gt;[[Voy a hacer mi pregunta porque en la vida no hay preguntas bobas sino bobos que no preguntan|Hablando en público]]&lt;/li&gt;\
         &lt;li&gt;[[Voy a buscarla en internet, confío más en su respuesta|Buscando duda en internet][$nivelAnsiedad += 10]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="4" name="Buscando duda en internet" tags="" position="875,475" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/buscando_duda_internet.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="4" name="Buscando duda en internet" tags="" position="875,475" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/buscando_duda_internet.webp&quot; alt=&quot;Buscando duda en internet&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;No te atreves a preguntar. Bajas la mirada y finges tomar notas, pero tu mente sigue dando vueltas a la duda. Sacas el celular y buscas información en internet.&lt;/p&gt;\
 \
@@ -475,9 +702,10 @@ $uiBar.attr({
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Cena familiar]]&lt;/li&gt;
 	&lt;/ul&gt;
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="6" name="Cena familiar" tags="" position="1325,400" size="100,100">&lt;h2&gt;ESCENARIO 2: Cena con tus padres&lt;/h2&gt;\
+&lt;/nav&gt;
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Cena familiar" tags="" position="1325,400" size="100,100">&lt;h2&gt;ESCENARIO 2: Cena con tus padres&lt;/h2&gt;\
 \
-&lt;img src=&quot;imagenes/cena_con_padres.webp&quot;&gt;\
+&lt;img src=&quot;imagenes/cena_con_padres.webp&quot; alt=&quot;Cena con padres&quot;&gt;\
 \
 &lt;p&gt;Despiertas del sueño y tu mamá te llama para cenar. Bajas al comedor, donde todo parece tranquilo mientras tus padres conversan. Comentas sobre la charla del colegio, pero la calma se rompe cuando tu papá pregunta: &quot;¿Y tú? ¿Ya has pensado qué quieres estudiar?&quot;. El ruido de fondo desaparece, tu corazón se acelera, y las palabras se atascan. Sus rostros expectantes te llenan de presión, y no sabes cómo responder.&lt;/p&gt;\
 \
@@ -493,7 +721,7 @@ $uiBar.attr({
         &lt;li&gt;[[Invento una respuesta, es mejor esto que nada|Respuesta inventada][$nivelAnsiedad += 10]]&lt;/li&gt;\
 &lt;&lt;/if&gt;&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="7" name="Comiendo con amigos" tags="" position="650,700" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/comiendo_con_amigos.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="7" name="Comiendo con amigos" tags="" position="650,700" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/comiendo_con_amigos.webp&quot; alt=&quot;Comiendo papas con amigos&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Decides no entrar y buscas a tus amigos en el patio y caminan hacia la tienda. Se ríen de tonterías y piden algunas papas fritas y gaseosas.&lt;/p&gt;\
 \
@@ -514,7 +742,9 @@ $uiBar.attr({
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar |No pase]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="9" name="Contar o no" tags="" position="2850,175" size="100,100">&lt;p&gt;Miro a mis padres desde la sala, preguntándome si debería decirles. ¿Cómo reaccionarán? ¿Volverán a sermonearme?&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="9" name="Contar o no" tags="" position="2850,175" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/contar_o_no_la_verdad.webp&quot; alt=&quot;Viendo desde la sala a tus padres felices y tu pensativo&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Miro a mis padres desde la sala, preguntándome si debería decirles. ¿Cómo reaccionarán? ¿Volverán a sermonearme?&lt;/p&gt;\
 \
 &lt;p&gt;El nudo en mi garganta crece. Quiero hablar, pero el recuerdo de nuestras últimas charlas me detiene. &lt;/p&gt;\
 \
@@ -523,7 +753,9 @@ $uiBar.attr({
     	&lt;li&gt;[[Seamos honestos|Decir la verdad]]&lt;/li&gt;\
         &lt;li&gt;[[Ocultar las cosas|Ocultar la verdad]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="10" name="Decir la verdad" tags="" position="2975,25" size="100,100">&lt;p&gt;Les digo la verdad. Mis padres se entristecen, pero no me reprochan. Solo me piden que vaya a mi cuarto mientras ellos piensan qué hacer.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="10" name="Decir la verdad" tags="" position="2975,25" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/padres_compasivos.webp&quot; alt=&quot;Sentados en la sala hablando&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Les digo la verdad. Mis padres se entristecen, pero no me reprochan. Solo me piden que vaya a mi cuarto mientras ellos piensan qué hacer.&lt;/p&gt;\
 \
 &lt;p&gt;Horas después, me llaman. “Hemos decidido inscribirte en un preuniversitario. Será una nueva oportunidad para prepararte”, dicen con una mezcla de firmeza y cariño.&lt;/p&gt;\
 \
@@ -580,8 +812,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Pase a la universidad]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="16" name="Distraído" tags="" position="725,100" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/se_distrae_en_el_celular.webp&quot;&gt;&lt;/div&gt;\
-\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="16" name="Distraído" tags="" position="725,100" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/se_distrae_en_el celular.webp&quot; alt=&quot;Viendo memes en el celular&quot;&gt;&lt;/div&gt;\
 &lt;p&gt;Sacas el celular de tu bolsillo y lo enciendes. Miras mensajes, memes, cualquier cosa que te aleje de lo que está pasando aquí. Te sientes menos ansioso, pero solo por un momento.&lt;/p&gt;\
 \
 &lt;p&gt;De pronto, una voz en tu cabeza susurra: &lt;i&gt;Deberías estar prestando atención. Viniste para esto, ¿no?&lt;/i&gt; Intentas ignorarla y sigues deslizando. Pero la culpa crece. &lt;i&gt;¿Y si me estoy perdiendo algo importante?&lt;/i&gt;&lt;/p&gt;\
@@ -600,7 +831,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
         &lt;li&gt;[[Mejor pongo atención, creo que están diciendo cosas interesantes|Atento a la charla]]&lt;/li&gt;\
 	&lt;/ul&gt;\
 &lt;/nav&gt;\
-&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio asistir_a_charla play&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="En el baño" tags="" position="1475,475" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/en_el_bano.webp&gt;&lt;/div&gt;\
+&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio asistir_a_charla play&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="En el baño" tags="" position="1475,475" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/en_el_bano.webp&quot; alt=&quot;En el bano con ataque de ansiedad&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;La pregunta te supera, así que te excusas y te encierras en el baño. Escuchas a tus padres murmurar preocupados, lo que aumenta tu angustia.&lt;/p&gt;\
 \
@@ -609,7 +840,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	&lt;li&gt;[[Continuar|Regreso a la mesa]]&lt;/li&gt;
 	&lt;/ul&gt;\
 &lt;/nav&gt;</tw-passagedata><tw-passagedata pid="19" name="Escenario 1" tags="" position="425,400" size="100,100">&lt;h2&gt;ESCENARIO 1: Charla sobre proyecto de Vida&lt;/h2&gt;\
-&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/ir_a_charla.webp&quot;&gt;&lt;/div&gt;\
+&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/ir_a_charla.webp&quot;  alt=&quot;Pensando si ir a charla&quot;&gt;&lt;/div&gt;\
 &lt;p&gt;Estás en el patio del colegio cuando de repente escuchas a la profesora Marcela decir: &quot;¡Recuerden, estudiantes! La charla sobre la universidad comienza en cinco minutos. Es importante que asistan si están pensando en su futuro.&quot;&lt;/p&gt;\
 &lt;p&gt;La palabra &quot;Futuro&quot; te golpea como un eco pesado. &lt;b&gt;Futuro&lt;/b&gt;. Solo pensar en ello hace que tu estómago se encoja. &lt;i&gt;¿Qué se supone que debo hacer?&lt;/i&gt; Tus pensamientos hacen un torbellino: &lt;i&gt;¿Y si voy y dicen cosas que no entiendo? ¿Y si me hacen preguntas? ¿Qué pasa si no tengo ni idea de qué quiero hacer?&lt;/i&gt;&lt;/p&gt;\
 &lt;p&gt;&lt;i&gt;Decide rápido si debes ir o no a la charla&lt;/i&gt;, te dices a ti mismo. Pero tu cuerpo no responde.&lt;/p&gt;\
@@ -619,7 +850,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 		&lt;li&gt;[[Esas charlas siempre son lo mismo, prefiero no asistir|Comiendo con amigos][$estadoEnCharla to &quot;ausente&quot;]]&lt;/li&gt;\
     &lt;/ul&gt;\
 &lt;/nav&gt;\
-&lt;&lt;set $nivelAnsiedad to 10&gt;&gt;&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio fondo_colegio play&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Estudio" tags="" position="1775,25" size="100,100">&lt;p&gt;Miras la pila de tareas pendientes. Suspiras, sabiendo que, si no empiezas ahora, mañana será peor, y comienzas a hacerlas. Al principio, te sientes abrumado. &lt;i&gt;¿Cómo dejé que se acumulara tanto?&lt;/i&gt; Pero poco a poco, vas avanzando. La sensación de estar logrando algo empieza a reemplazar el estrés.&lt;/p&gt;\
+&lt;&lt;set $nivelAnsiedad to 10&gt;&gt;&lt;&lt;if $audio&gt;&gt;&lt;&lt;audio fondo_colegio play&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Estudio" tags="" position="1775,25" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/estudiando.webp&quot; alt=&quot;Estudiando con pila de tareas al lado&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Miras la pila de tareas pendientes. Suspiras, sabiendo que, si no empiezas ahora, mañana será peor, y comienzas a hacerlas. Al principio, te sientes abrumado. &lt;i&gt;¿Cómo dejé que se acumulara tanto?&lt;/i&gt; Pero poco a poco, vas avanzando. La sensación de estar logrando algo empieza a reemplazar el estrés.&lt;/p&gt;\
 \
 &lt;p&gt;Horas después, te sientes cansado, pero también un poco más tranquilo. &lt;i&gt;Al menos hice algo hoy&lt;/i&gt;. Cierras los ojos, y esta vez, el sueño llega más rápido.&lt;/p&gt;\
 \
@@ -633,7 +866,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Invitación a salir]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="23" name="Hablando en público" tags="" position="875,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/hablando_en_publico.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;\
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Hablando en público" tags="" position="875,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/hablando_en_publico.webp&quot; alt=&quot;Hablando en publico&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Te levantas sintiendo todas las miradas sobre ti. Aunque tenías la pregunta clara en tu mente, los nervios te traicionan y tus palabras se desordenan, provocando risas que aumentan tu incomodidad.&lt;/p&gt;\
 \
@@ -643,7 +877,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Inspiración]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="24" name="Honestidad (negativo)" tags="" position="1475,625" size="100,100">&lt;p&gt;Bajas la mirada y les dices la verdad: &quot;No sé, ni siquiera fui a la charla del colegio… no sé qué responder.&quot;&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="24" name="Honestidad (negativo)" tags="" position="1475,625" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/no_responder.webp&quot; alt=&quot;Tension y disgusto de padres&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Bajas la mirada y les dices la verdad: &quot;No sé, ni siquiera fui a la charla del colegio… no sé qué responder.&quot;&lt;/p&gt;\
 \
 &lt;p&gt;La reacción es inmediata. Tu papá se cruza de brazos, y tu mamá se muestra decepcionada. Te hablan sobre la importancia de tomar estas cosas en serio. Te sientes atacado, y antes de que la discusión se agrande, te levantas y te vas al cuarto, cerrando la puerta con fuerza.&lt;/p&gt;\
 \
@@ -651,7 +887,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Sentirse mal]]&lt;/li&gt;
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="25" name="Honestidad (positivo)" tags="" position="1475,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/si_responder,webp&gt;&lt;/div&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="25" name="Honestidad (positivo)" tags="" position="1475,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/si_responder.webp&quot; alt=&quot;Padres contentos&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Respiras profundo y admites que no tienes claro qué estudiar, pero compartes lo que aprendiste en la charla: no es necesario decidirlo todo de inmediato. Tu mamá sonríe y dice que es un buen comienzo. La cena continúa tranquila, y te sientes más aliviado.&lt;/p&gt;\
 \
@@ -667,7 +903,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Seguir viendo charla]]&lt;/li&gt;\
 	&lt;/ul&gt;
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="27" name="Invitación a salir" tags="" position="2100,400" size="100,100">&lt;p&gt;Al despertar veo el celular, es temprano, pero ya hay un mensaje en el grupo de amigos: “Vamos a comer algo más tarde. ¿Quién se apunta?”&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="27" name="Invitación a salir" tags="" position="2100,400" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/invitacion_salir.webp&quot; alt=&quot;Viendo el celular con la invitacion a salir e imaginando que sale mal&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Al despertar veo el celular, es temprano, pero ya hay un mensaje en el grupo de amigos: “Vamos a comer algo más tarde. ¿Quién se apunta?”&lt;/p&gt;\
 \
 &lt;p&gt;Me quedo mirando el mensaje por un rato. &lt;i&gt;¿Debería ir?&lt;/i&gt; La idea de salir parece tentadora; tal vez podría distraerme un poco, dejar de pensar tanto. Pero entonces las dudas aparecen: &lt;i&gt;¿Y si no sé de qué hablar? ¿Y si parezco aburrido? ¿Realmente quiero salir o solo estoy buscando escapar de algo más?&lt;/i&gt;&lt;/p&gt;\
 \
@@ -676,14 +914,14 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 &lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
 	&lt;ul&gt;\
     	&lt;&lt;if $honestidad is true&gt;&gt;\
-        	&lt;li&gt;[[No me siento animado, pero vamos|Acepto(Honestidad)]]&lt;/li&gt;\
-        	&lt;li&gt;[[No tengo ánimos, quedémonos en casa |Rechazo(Honestidad)]]&lt;/li&gt;\
+        	&lt;li&gt;[[No me siento animado, pero vamos|Acepto(Honestidad)][$nivelAnsiedad += 10]]&lt;/li&gt;\
+        	&lt;li&gt;[[No tengo ánimos, quedémonos en casa |Rechazo(Honestidad)][$nivelAnsiedad += 10]]&lt;/li&gt;\
 		&lt;&lt;else&gt;&gt;\
         	&lt;li&gt;[[Voy a ir, quiero divertirme con mis amigos|Acepto]]&lt;/li&gt;\
         	&lt;li&gt;[[Que pereza, mejor me quedo en casa |Rechazo]]&lt;/li&gt;\
         &lt;&lt;/if&gt;&gt;
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="28" name="Invitación a salir (rechazada)" tags="" position="2100,100" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/invitacion_salir.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="28" name="Invitación a salir (rechazada)" tags="" position="2100,100" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/invitacion_salir.webp&quot; alt=&quot;Viendo el celular con la invitacion a salir e imaginando que sale mal&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Mientras intentas dormirte, el celular vibra. ¿Quién será a esta hora? Lo agarras y desbloqueas la pantalla. Es un mensaje de tus amigos: &quot;¿Vamos a comer algo? Nos vemos en 20 minutos.&quot;&lt;/p&gt;\
 \
@@ -711,7 +949,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 &lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
 	&lt;ul&gt;\
-    	&lt;li&gt;[[Continuar|No compraste el PIN]]&lt;/li&gt;\
+    	&lt;li&gt;[[Continuar|Sentirse mal en el cuarto]]&lt;/li&gt;\
 	&lt;/ul&gt;\
 &lt;/nav&gt;</tw-passagedata><tw-passagedata pid="31" name="Irse al cuarto" tags="" position="1625,100" size="100,100">&lt;p&gt;Decides ir a tu cuarto y cierras la puerta detrás de ti. Te tiras en la cama con los brazos cruzados, mirando el techo. Tu mente no para: &lt;i&gt;¿Qué pasará si sigo evitando estas conversaciones? ¿Y si no soy lo suficientemente bueno para nada?&lt;/i&gt;&lt;/p&gt;\
 \
@@ -722,7 +960,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	&lt;li&gt;[[Es mejor terminar las tareas y estar libre para el ocio|Estudio]]&lt;/li&gt;\
         &lt;li&gt;[[Ha sido un día muy pesado y mereces descansar|Descanso][$nivelAnsiedad += 10]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="32" name="Llegada donde los amigos" tags="" position="2675,325" size="100,100">&lt;p&gt;Decido ir y pido un carro. Cuando finalmente llego, ya todos están sentados y riendo. Me disculpo rápido: “Perdón por la tardanza, el tráfico estaba terrible.”&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="32" name="Llegada donde los amigos" tags="" position="2675,325" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/salida_amigos.webp&quot; alt=&quot;Con amigos riendo&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Decido ir y pido un carro. Cuando finalmente llego, ya todos están sentados y riendo. Me disculpo rápido: “Perdón por la tardanza, el tráfico estaba terrible.”&lt;/p&gt;\
 \
 &lt;p&gt;Ellos me dicen que no pasa nada, pero sigo sintiéndome fuera de lugar. Me tomo un momento para tratar de relajarme y unirme a la conversación.&lt;/p&gt;\
 \
@@ -765,7 +1005,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Comenzar historia interactiva|Escenario 1]]&lt;/li&gt;\
     &lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="35" name="Mesero" tags="" position="2925,825" size="100,100">&lt;p&gt;Decido salir. Camino sin rumbo hasta que un letrero llama mi atención: “Se necesita mesero”. Me detengo frente a la puerta, dudando. &lt;i&gt;¿Y si no soy bueno para esto? ¿Debería intentarlo?&lt;/i&gt;&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="35" name="Mesero" tags="" position="2925,825" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/mesero.webp&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Decido salir. Camino sin rumbo hasta que un letrero llama mi atención: “Se necesita mesero”. Me detengo frente a la puerta, dudando. &lt;i&gt;¿Y si no soy bueno para esto? ¿Debería intentarlo?&lt;/i&gt;&lt;/p&gt;\
 \
 &lt;p&gt;Finalmente, entro y pregunto por el trabajo. Para mi sorpresa, me lo dan. Los primeros días son difíciles, pero poco a poco comienzo a sentirme útil, a entender que no necesito tener todo claro ahora mismo.&lt;/p&gt;\
 \
@@ -793,7 +1035,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Contar o no]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="38" name="No pase" tags="" position="2925,700" size="100,100">&lt;p&gt;Pasan los días y llega el resultado: No pasaste. Mi corazón se hunde, y las dudas vuelven a invadirme.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="38" name="No pase" tags="" position="2925,700" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/no_pase.webp&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Pasan los días y llega el resultado: No pasaste. Mi corazón se hunde, y las dudas vuelven a invadirme.&lt;/p&gt;\
 \
 &lt;p&gt;Reúno valor y se lo cuento a mis padres. Para mi sorpresa, me apoyan. “No te preocupes, hay más oportunidades”, dice mi mamá con una sonrisa.&lt;/p&gt;\
 \
@@ -803,7 +1047,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Fin |FIN]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="39" name="No responder" tags="" position="1475,25" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/no_responder.webp&gt;&lt;/div&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="39" name="No responder" tags="" position="1475,25" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/no_responder.webp&quot; alt=&quot;Tension y disgusto de padres&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;No respondes, pero eso solo hace que insistan. &quot;Toño, este es un tema serio. ¿Qué te gustaría estudiar?&quot;, pregunta tu papá con más firmeza.&lt;/p&gt;\
 \
@@ -813,7 +1057,7 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Irse al cuarto]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="40" name="No vine aquí para esto" tags="" position="875,175" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/mejor_pongo_atencion.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="40" name="No vine aquí para esto" tags="" position="875,175" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/mejor_pongo_atencion.webp&quot; alt=&quot;Poniendo atencion a la charla&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Dejas el celular sobre tu regazo. Suspiras, sintiendo la culpa como un peso en el pecho. &lt;i&gt;No vine aquí para esto&lt;/i&gt;.&lt;/p&gt;\
 \
@@ -843,7 +1087,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
     	&lt;li&gt;[[Iré a la reunión, ¿Qué es lo peor que puede pasar?|Llegada donde los amigos]]&lt;/li&gt;\
         &lt;li&gt;[[No esta mal quedarse en casa, me quiero ver una peli|Ir a la sala]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="43" name="Pase a la universidad" tags="" position="3050,450" size="100,100">&lt;p&gt;Pasan días, y finalmente, los resultados están disponibles. Con el corazón latiendo fuerte, reviso la página.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="43" name="Pase a la universidad" tags="" position="3050,450" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/pase_a_la_universidad.webp&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Pasan días, y finalmente, los resultados están disponibles. Con el corazón latiendo fuerte, reviso la página.&lt;/p&gt;\
 \
 &lt;p&gt;¡Pasé!&lt;/p&gt;\
 \
@@ -862,7 +1108,12 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 		Nivel de Ansiedad: &lt;span id=&quot;ansiedad-num&quot;&gt;&lt;&lt;= $nivelAnsiedad&gt;&gt;%&lt;/span&gt;\
 	&lt;/div&gt;\
     &lt;&lt;script&gt;&gt;Save.browser.slot.save(0);&lt;&lt;/script&gt;&gt;\
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Pedir comida" tags="" position="2800,575" size="100,100">&lt;p&gt;Cuando llega el momento de pedir comida, elijo lo primero que veo en el menú sin pensarlo. Estoy desconectado hasta que un amigo me pregunta: “¿Estás bien?”&lt;/p&gt;\
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;theme-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;theme-toggle&quot; /&gt;
+  &lt;label for=&quot;theme-toggle&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Pedir comida" tags="" position="2800,575" size="100,100">&lt;p&gt;Cuando llega el momento de pedir comida, elijo lo primero que veo en el menú sin pensarlo. Estoy desconectado hasta que un amigo me pregunta: “¿Estás bien?”&lt;/p&gt;\
 \
 &lt;p&gt;&lt;i&gt;“Sí, todo bien”&lt;/i&gt;, miento, forzando una sonrisa. No quiero que noten lo que realmente siento. Después de un rato, me excuso y me voy a casa.&lt;/p&gt;\
 \
@@ -870,7 +1121,9 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar |Revisar correo]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="46" name="Pesadilla" tags="" position="1775,475" size="100,100">&lt;p&gt;Te quedas dormido y sueñas que estás caminando por un pasillo. Hay puertas cerradas cada una con un letrero: &quot;Medicina&quot;, &quot;Ingeniería&quot;, &quot;Arte&quot;. Tratas de abrir una, pero están bloqueadas, y la sensación de urgencia crece, una gran puerta con la palabra “Futuro” aparece frente a ti. La abres, y detrás solo hay un abismo oscuro. Sientes que caes, y el vacío se apodera de ti.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="46" name="Pesadilla" tags="" position="1775,475" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/pesadilla.webp&quot; alt=&quot;Representacion pesadilla&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Te quedas dormido y sueñas que estás caminando por un pasillo. Hay puertas cerradas cada una con un letrero: &quot;Medicina&quot;, &quot;Ingeniería&quot;, &quot;Arte&quot;. Tratas de abrir una, pero están bloqueadas, y la sensación de urgencia crece, una gran puerta con la palabra “Futuro” aparece frente a ti. La abres, y detrás solo hay un abismo oscuro. Sientes que caes, y el vacío se apodera de ti.&lt;/p&gt;\
 \
 &lt;p&gt;Te despiertas de golpe, miras el reloj: las primeras luces del día comienzan a entrar por la ventana. &lt;i&gt;Por lo menos ya amaneció…&lt;/i&gt;&lt;/p&gt;\
 \
@@ -878,7 +1131,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Invitación a salir]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="47" name="Preguntar a un amigo" tags="" position="875,625" size="100,100">&lt;p&gt;No puedes evitar sentirte culpable. Apenas terminas tu gaseosa, buscas a uno de tus amigos que sí fue a la charla &quot;¿De qué hablaron?&quot;, le preguntas.&lt;/p&gt;\
+&lt;/nav&gt;\
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Preguntar a un amigo" tags="" position="875,625" size="100,100">&lt;p&gt;No puedes evitar sentirte culpable. Apenas terminas tu gaseosa, buscas a uno de tus amigos que sí fue a la charla &quot;¿De qué hablaron?&quot;, le preguntas.&lt;/p&gt;\
 \
 &lt;p&gt;Te explica algunos puntos pero las dudas siguen rondando tu mente. &lt;i&gt;¿Qué más dijeron que podría servirme? ¿Habrán mencionado algo que me perdí por completo?&lt;/i&gt;&lt;/p&gt;\
 \
@@ -888,9 +1142,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Cena familiar]]&lt;/li&gt;
 	&lt;/ul&gt;
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="48" name="Rechazo" tags="" position="2375,450" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/viendo_soul.webp&quot;&gt;&lt;/div&gt;\
-\
-&lt;p&gt;Escribo: &lt;i&gt;“No puedo hoy, tal vez en otra ocasión”&lt;/i&gt;.&lt;/p&gt;\
+&lt;/nav&gt;
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Rechazo" tags="" position="2375,450" size="100,100">&lt;p&gt;Escribo: &lt;i&gt;“No puedo hoy, tal vez en otra ocasión”&lt;/i&gt;.&lt;/p&gt;\
 \
 &lt;p&gt;No quiero ver las respuestas ni pensar en cómo reaccionarán mis amigos, así que dejo el celular a un lado.&lt;/p&gt;\
 \
@@ -918,13 +1171,17 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Pesadilla]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="51" name="Responder con inseguridad" tags="" position="1475,175" size="100,100">&lt;p&gt;Balbuceas algo incoherente, mencionando opciones vagas. Tus padres te piden que tomes el tema en serio, y te sientes pequeño y frustrado por no tener una respuesta clara.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="51" name="Responder con inseguridad" tags="" position="1475,175" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/no_responder.webp&quot; alt=&quot;Tension y disgusto de padres&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Balbuceas algo incoherente, mencionando opciones vagas. Tus padres te piden que tomes el tema en serio, y te sientes pequeño y frustrado por no tener una respuesta clara.&lt;/p&gt;\
 \
 &lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Irse al cuarto]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="52" name="Respuesta inventada" tags="" position="1475,775" size="100,100">&lt;p&gt;&quot;Medicina&quot;, dices sin pensar mucho, solo para salir del paso. La expresión de tus padres cambia al instante. Ambos parecen aliviados. &quot;Eso es una gran decisión, Toño&quot;, dice tu mamá, sonriendo.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="52" name="Respuesta inventada" tags="" position="1475,775" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/si_responder.webp&quot; alt=&quot;Padres felices&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;&quot;Medicina&quot;, dices sin pensar mucho, solo para salir del paso. La expresión de tus padres cambia al instante. Ambos parecen aliviados. &quot;Eso es una gran decisión, Toño&quot;, dice tu mamá, sonriendo.&lt;/p&gt;\
 \
 &lt;p&gt;Sientes alivio al ver sus reacciones, pero también algo de incomodidad. Piensas: &lt;i&gt;¿Siquiera me gusta la medicina? ¡¡¡Porque creo que le tengo miedo a la sangre… ¡¡¡Oh no, qué he hecho!!!&lt;/i&gt;&lt;/p&gt;\
 \
@@ -940,8 +1197,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 &lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
 	&lt;ul&gt;\
-    	&lt;li&gt;[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos]]&lt;/li&gt;\
-        &lt;li&gt;[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Sentirse mal en el cuarto]]&lt;/li&gt;\
+    	&lt;li&gt;[[Me gana la curiosidad las quiero ver |Viendo fotos salida amigos][$nivelAnsiedad += 10]]&lt;/li&gt;\
+        &lt;li&gt;[[Me lleva a: Prefiero estar tranquilo por ahora y no reviso el celular. |Videojuegos]]&lt;/li&gt;\
 	&lt;/ul&gt;\
 &lt;/nav&gt;</tw-passagedata><tw-passagedata pid="54" name="Revisar correo" tags="" position="2675,700" size="100,100">&lt;p&gt;Luego de un rato reviso mi correo. Una notificación llama mi atención: Último día para comprar el pin del examen.&lt;/p&gt;\
 \
@@ -968,7 +1225,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Cena familiar]]&lt;/li&gt;
 	&lt;/ul&gt;
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="57" name="Seguir viendo charla" tags="" position="1175,250" size="100,100">&lt;p&gt;La charla termina y caminas en silencio hacia la salida.&lt;/p&gt;\
+&lt;/nav&gt;
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Seguir viendo charla" tags="" position="1175,250" size="100,100">&lt;p&gt;La charla termina y caminas en silencio hacia la salida.&lt;/p&gt;\
 \
 &lt;p&gt;En el camino a casa no estás seguro de qué sientes. No es exactamente tristeza, pero tampoco alegría. &lt;i&gt;Quizás debería pensar más en lo que dijeron… o tal vez no importa tanto.&lt;/i&gt;&lt;/p&gt;\
 \
@@ -978,7 +1236,8 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar|Cena familiar]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="58" name="Sentirse mal" tags="" position="1625,700" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/sentirse_mal.webp&quot;&gt;&lt;/div&gt;\
+&lt;/nav&gt;\
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Sentirse mal" tags="" position="1625,700" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/sentirse_mal.webp&quot; alt=&quot;Acostado en cama mirando al techo&quot;&gt;&lt;/div&gt;\
 \
 &lt;p&gt;Llegas a tu cuarto sintiéndote peor que nunca, mientras piensas: &lt;i&gt;¿Por qué soy así? ¿Por qué no puedo hacer lo correcto?&lt;/i&gt;&lt;/p&gt;\
 &lt;p&gt;Piensas en tus padres: &lt;i&gt;¿Qué estarán diciendo de mí ahora? ¿Qué pasa si siempre los decepciono?&lt;/i&gt; Tu futuro parece más confuso que nunca. &lt;i&gt;¿Cómo voy a encontrar algo que me guste? ¿Y si nunca lo hago?&lt;/i&gt;&lt;/p&gt;\
@@ -986,9 +1245,10 @@ Así que sigues viendo la pantalla, riéndote a ratos. Pero no aprendes nada. So
 \
 &lt;nav aria-label=&quot;Opciones de historia&quot;&gt;\
 	&lt;ul&gt;\
-    	&lt;li&gt;[[Continuar|Invitación a salir]]&lt;/li&gt;\
+    	&lt;li&gt;[[Continuar|Invitación a salir][$honestidad to true]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;\</tw-passagedata><tw-passagedata pid="59" name="Sentirse mal en el cuarto" tags="" position="2700,25" size="100,100">&lt;p&gt;Me encierro en mi cuarto. Todo lo que pasó hoy sigue rondando en mi cabeza ¿Por qué no puedo ser como los demás? ¿Por qué siempre sobrepienso todo?&lt;/p&gt;\
+&lt;/nav&gt;\
+&lt;&lt;set $nivelAnsiedad+=10&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Sentirse mal en el cuarto" tags="" position="2700,25" size="100,100">&lt;p&gt;Me encierro en mi cuarto. Todo lo que pasó hoy sigue rondando en mi cabeza ¿Por qué no puedo ser como los demás? ¿Por qué siempre sobrepienso todo?&lt;/p&gt;\
 \
 &lt;p&gt;Siento un nudo en el pecho que no desaparece. Trato de calmarme, pero mi mente no para: ¿Qué pasa si siempre soy así? ¿Si nunca logro avanzar?&lt;/p&gt;\
 \
@@ -1034,7 +1294,9 @@ Sub~~script~~
 	&lt;ul&gt;\
     	&lt;li&gt;[[Fin |FIN]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="64" name="Videojuegos" tags="" position="2400,175" size="100,100">&lt;p&gt;Decido no revisar el celular y voy a la sala. Enciendo la consola para distraerme con un videojuego, pero no llevo mucho tiempo jugando cuando mis padres me ven.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="64" name="Videojuegos" tags="" position="2400,175" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/videojuegos.webp&quot; alt=&quot;En la sala jugando videojuegos y padres disgustados&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Decido no revisar el celular y voy a la sala. Enciendo la consola para distraerme con un videojuego, pero no llevo mucho tiempo jugando cuando mis padres me ven.&lt;/p&gt;\
 \
 &lt;p&gt;“¿Otra vez jugando? ¿Y el estudio?” pregunta mi papá con el ceño fruncido. Bajo el control, sintiendo cómo el peso de su desaprobación se suma al nudo en mi pecho. ¿Por qué nunca puedo hacer las cosas bien?&lt;/p&gt;\
 \
@@ -1042,7 +1304,9 @@ Sub~~script~~
 	&lt;ul&gt;\
     	&lt;li&gt;[[Continuar |Ir al comedor]]&lt;/li&gt;\
 	&lt;/ul&gt;\
-&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="65" name="Viendo Soul" tags="" position="2675,450" size="100,100">&lt;p&gt;Después de mucho buscar, encuentro &quot;Soul&quot; en una plataforma. La veo con curiosidad, pero pronto me cautiva. Sus mensajes sobre el propósito de la vida y la importancia de disfrutar el presente me tocan profundamente.&lt;/p&gt;\
+&lt;/nav&gt;</tw-passagedata><tw-passagedata pid="65" name="Viendo Soul" tags="" position="2675,450" size="100,100">&lt;div class=&quot;contenedor-imagen&quot;&gt;&lt;img src=&quot;imagenes/viendo_soul.webp&quot; alt=&quot;En la sala viendo soul&quot;&gt;&lt;/div&gt;\
+\
+&lt;p&gt;Después de mucho buscar, encuentro &quot;Soul&quot; en una plataforma. La veo con curiosidad, pero pronto me cautiva. Sus mensajes sobre el propósito de la vida y la importancia de disfrutar el presente me tocan profundamente.&lt;/p&gt;\
 \
 &lt;p&gt;Para cuando termina, tengo lágrimas en los ojos. Tal vez no necesito tenerlo todo resuelto ahora mismo. Por primera vez en mucho tiempo, siento algo diferente: alivio.&lt;/p&gt;\
 \
